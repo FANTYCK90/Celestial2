@@ -1,0 +1,3151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CELESTIAL.COM — Легендарные Гайды</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2270%22>✨</text></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Orbitron:wght@700&display=swap');
+
+/* --- Цветовые переменные для тем --- */
+:root {
+    /* Тема по умолчанию: Розовая Сакура */
+    --primary-color: #f973a1; /* Розовый */
+    --secondary-color: #db2777; /* Темно-розовый */
+    --accent-color: #e11d48; /* Красный */
+    --light-text-color: #f2e6e9; /* Светлый текст */
+    --dark-bg-color: rgba(40, 5, 30, 0.6); /* Темный фон */
+    --card-bg-color: rgba(30, 0, 25, 0.75); /* Фон карточки */
+    --admin-bg-color: rgba(40, 0, 30, 0.85); /* Фон админки */
+    --background-image: url('https://zastavki.gas-kvas.com/uploads/posts/2024-09/zastavki-gas-kvas-com-lktl-p-zastavki-na-rabochii-stol-sakura-anime-12.jpg');
+    --header-glow-color1: var(--accent-color);
+    --header-glow-color2: var(--secondary-color);
+    --header-glow-color3: var(--primary-color);
+    --card-shadow-color: rgba(219, 39, 119, 0.8);
+    --card-hover-shadow-color1: rgba(219, 39, 119, 1);
+    --card-hover-shadow-color2: var(--primary-color);
+    --price-glow-color: var(--accent-color);
+    --price-pulse-color1: var(--accent-color);
+    --price-pulse-color2: var(--primary-color);
+    --btn-buy-shadow-color: var(--secondary-color);
+    --btn-buy-hover-shadow-color1: var(--accent-color);
+    --btn-buy-hover-shadow-color2: var(--primary-color);
+    --section-shadow-color: var(--secondary-color);
+    --review-form-bg: rgba(20, 0, 15, 0.7);
+    --review-form-shadow-color: rgba(219, 39, 119, 0.5);
+    --review-list-bg: rgba(20, 0, 15, 0.7);
+    --review-list-shadow-color: rgba(219, 39, 119, 0.3);
+    --review-border-color: var(--primary-color);
+    --thankyou-shadow-color1: var(--secondary-color);
+    --thankyou-shadow-color2: var(--accent-color);
+    --thankyou-border-color: var(--primary-color);
+    --discord-bg: #330014;
+    --discord-shadow-color1: var(--secondary-color);
+    --discord-shadow-color2: var(--accent-color);
+    --discord-hover-shadow-color1: var(--accent-color);
+    --discord-hover-shadow-color2: var(--primary-color);
+    --input-focus-shadow1: var(--primary-color);
+    --input-focus-shadow2: var(--secondary-color);
+}
+
+/* Тема: Wolf Night (Сине-серые тона) */
+body.wolf-night-theme {
+    --primary-color: #ADD8E6; /* Светло-голубой (для заголовков, ярких элементов) */
+    --secondary-color: #6A88A8; /* Средне-синий (для границ, теней, фона кнопок) */
+    --accent-color: #465B7A; /* Темно-синий (для акцентов, текста) */
+    --light-text-color: #E0E8F0; /* Очень светло-голубой текст */
+    --dark-bg-color: rgba(10, 15, 25, 0.7); /* Темный синий фон */
+    --card-bg-color: rgba(15, 20, 35, 0.85); /* Фон карточки */
+    --admin-bg-color: rgba(20, 25, 40, 0.9); /* Фон админки */
+    --background-image: url('https://cdn.discordapp.com/attachments/959439874627346462/1386339122058104972/d197f3d63e273b6f5c105412b799eae6.jpeg?ex=685bfb6b&is=685aa9eb&hm=f8c4887f3f91e5da9a303eaf32d83eaabfdb2a90c434507822bd1eba658ddaf8&'); /* ПРЯМАЯ ССЫЛКА НА ВАШУ КАРТИНКУ */
+
+    /* Цвета для свечения заголовка */
+    --header-glow-color1: var(--accent-color);
+    --header-glow-color2: var(--secondary-color);
+    --header-glow-color3: var(--primary-color);
+
+    /* Цвета для карточек */
+    --card-shadow-color: rgba(70, 130, 180, 0.6); /* Стальной синий */
+    --card-hover-shadow-color1: rgba(70, 130, 180, 0.9);
+    --card-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для цены */
+    --price-glow-color: var(--accent-color);
+    --price-pulse-color1: var(--accent-color);
+    --price-pulse-color2: var(--primary-color);
+
+    /* Цвета для кнопок (более приглушенные синие/серые) */
+    --btn-buy-shadow-color: var(--secondary-color);
+    --btn-buy-hover-shadow-color1: var(--accent-color);
+    --btn-buy-hover-shadow-color2: var(--primary-color);
+    /* Для градиента кнопок */
+    --secondary-color: #506070; /* Темно-серый */
+    --accent-color: #708090; /* Средне-серый */
+
+    /* Цвета для секций */
+    --section-shadow-color: var(--secondary-color);
+    --review-form-bg: rgba(10, 15, 25, 0.7);
+    --review-form-shadow-color: rgba(70, 130, 180, 0.5);
+    --review-list-bg: rgba(10, 15, 25, 0.7);
+    --review-list-shadow-color: rgba(70, 130, 180, 0.3);
+    --review-border-color: var(--primary-color);
+
+    /* Цвета для ThankYou */
+    --thankyou-shadow-color1: var(--secondary-color);
+    --thankyou-shadow-color2: var(--accent-color);
+    --thankyou-border-color: var(--primary-color);
+
+    /* Цвета для Discord кнопки */
+    --discord-bg: #2c3e50; /* Темно-синий */
+    --discord-shadow-color1: var(--secondary-color);
+    --discord-shadow-color2: var(--accent-color);
+    --discord-hover-shadow-color1: var(--accent-color);
+    --discord-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для фокуса инпутов */
+    --input-focus-shadow1: var(--primary-color);
+    --input-focus-shadow2: var(--secondary-color);
+}
+
+/* Тема: Purple Mountain (Фиолетово-розовые тона) */
+body.purple-mountain-theme {
+    --primary-color: #DDA0DD; /* Слива (для заголовков, ярких элементов) */
+    --secondary-color: #9370DB; /* Средний фиолетовый (для границ, теней, фона кнопок) */
+    --accent-color: #BA55D3; /* Средний орхидея (для акцентов, текста) */
+    --light-text-color: #F0E6FA; /* Очень светло-фиолетовый текст */
+    --dark-bg-color: rgba(30, 0, 40, 0.7); /* Темный фиолетовый фон */
+    --card-bg-color: rgba(40, 0, 50, 0.85); /* Фон карточки */
+    --admin-bg-color: rgba(50, 0, 60, 0.9); /* Фон админки */
+    --background-image: url('https://cdn.discordapp.com/attachments/959439874627346462/1386676431211204608/IMG_8023.jpg?ex=685be410&is=685a9290&hm=3d26babb2837e57423d6e864e5563e6ca1f18ac9a02d310fcd208cef4c6613a0&'); /* ПРЯМАЯ ССЫЛКА НА ВАШУ КАРТИНКУ */
+
+    /* Цвета для свечения заголовка */
+    --header-glow-color1: var(--accent-color);
+    --header-glow-color2: var(--secondary-color);
+    --header-glow-color3: var(--primary-color);
+
+    /* Цвета для карточек */
+    --card-shadow-color: rgba(147, 112, 219, 0.6); /* Средний фиолетовый */
+    --card-hover-shadow-color1: rgba(147, 112, 219, 0.9);
+    --card-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для цены */
+    --price-glow-color: var(--accent-color);
+    --price-pulse-color1: var(--accent-color);
+    --price-pulse-color2: var(--primary-color);
+
+    /* Цвета для кнопок (фиолетово-розовые) */
+    --btn-buy-shadow-color: var(--secondary-color);
+    --btn-buy-hover-shadow-color1: var(--accent-color);
+    --btn-buy-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для секций */
+    --section-shadow-color: var(--secondary-color);
+    --review-form-bg: rgba(30, 0, 40, 0.7);
+    --review-form-shadow-color: rgba(147, 112, 219, 0.5);
+    --review-list-bg: rgba(30, 0, 40, 0.7);
+    --review-list-shadow-color: rgba(147, 112, 219, 0.3);
+    --review-border-color: var(--primary-color);
+
+    /* Цвета для ThankYou */
+    --thankyou-shadow-color1: var(--secondary-color);
+    --thankyou-shadow-color2: var(--accent-color);
+    --thankyou-border-color: var(--primary-color);
+
+    /* Цвета для Discord кнопки */
+    --discord-bg: #4B0082; /* Темно-индиго */
+    --discord-shadow-color1: var(--secondary-color);
+    --discord-shadow-color2: var(--accent-color);
+    --discord-hover-shadow-color1: var(--accent-color);
+    --discord-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для фокуса инпутов */
+    --input-focus-shadow1: var(--primary-color);
+    --input-focus-shadow2: var(--secondary-color);
+}
+
+/* НОВАЯ ТЕМА: Green Forest (Зеленые тона) */
+body.green-forest-theme {
+    --primary-color: #90EE90; /* Светло-зеленый */
+    --secondary-color: #3CB371; /* Средний морской зеленый */
+    --accent-color: #2E8B57; /* Морской зеленый */
+    --light-text-color: #E6FFE6; /* Очень светло-зеленый текст */
+    --dark-bg-color: rgba(0, 20, 0, 0.7); /* Темный зеленый фон */
+    --card-bg-color: rgba(0, 30, 0, 0.85); /* Фон карточки */
+    --admin-bg-color: rgba(0, 40, 0, 0.9); /* Фон админки */
+    --background-image: url('https://cdn.discordapp.com/attachments/959439874627346462/1384500555489214506/1697470267737.jpg?ex=685be29f&is=685a911f&hm=a6709b5d38ae4b8f9a8338f45a93005d67bb7cdd7b94ad043283d22fca2c3008&'); /* ВАША ПОСЛЕДНЯЯ КАРТИНКА */
+
+    /* Цвета для свечения заголовка */
+    --header-glow-color1: var(--accent-color);
+    --header-glow-color2: var(--secondary-color);
+    --header-glow-color3: var(--primary-color);
+
+    /* Цвета для карточек */
+    --card-shadow-color: rgba(60, 179, 113, 0.6); /* Средний морской зеленый */
+    --card-hover-shadow-color1: rgba(60, 179, 113, 0.9);
+    --card-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для цены */
+    --price-glow-color: var(--accent-color);
+    --price-pulse-color1: var(--accent-color);
+    --price-pulse-color2: var(--primary-color);
+
+    /* Цвета для кнопок */
+    --btn-buy-shadow-color: var(--secondary-color);
+    --btn-buy-hover-shadow-color1: var(--accent-color);
+    --btn-buy-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для секций */
+    --section-shadow-color: var(--secondary-color);
+    --review-form-bg: rgba(0, 25, 0, 0.7);
+    --review-form-shadow-color: rgba(60, 179, 113, 0.5);
+    --review-list-bg: rgba(0, 25, 0, 0.7);
+    --review-list-shadow-color: rgba(60, 179, 113, 0.3);
+    --review-border-color: var(--primary-color);
+
+    /* Цвета для ThankYou */
+    --thankyou-shadow-color1: var(--secondary-color);
+    --thankyou-shadow-color2: var(--accent-color);
+    --thankyou-border-color: var(--primary-color);
+
+    /* Цвета для Discord кнопки */
+    --discord-bg: #004D00; /* Очень темный зеленый */
+    --discord-shadow-color1: var(--secondary-color);
+    --discord-shadow-color2: var(--accent-color);
+    --discord-hover-shadow-color1: var(--accent-color);
+    --discord-hover-shadow-color2: var(--primary-color);
+
+    /* Цвета для фокуса инпутов */
+    --input-focus-shadow1: var(--primary-color);
+    --input-focus-shadow2: var(--secondary-color);
+}
+
+
+/* Общие стили, использующие переменные */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Orbitron', sans-serif; /* Изменено на Orbitron */
+    background: var(--background-image) no-repeat center center fixed; /* Используем переменную */
+    background-size: cover;
+    color: var(--light-text-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background 0.8s ease-in-out; /* Плавный переход фона */
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-bg-color);
+    z-index: -1;
+    animation: fadeInBackground 2s ease-out;
+    transition: background 0.8s ease-in-out; /* Плавный переход фона */
+}
+/* Анимация для каждой темы, чтобы фон появлялся плавно */
+@keyframes fadeInBackground {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 60px 20px 40px;
+    letter-spacing: 10px;
+    color: var(--primary-color);
+    text-shadow: 0 0 var(--glow-strength) var(--header-glow-color1), 0 0 calc(var(--glow-strength) * 2) var(--header-glow-color2);
+    user-select: none;
+    animation: neonGlow 1.5s infinite alternate ease-in-out;
+    transition: color 0.8s ease, text-shadow 0.8s ease; /* Плавный переход */
+}
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 var(--glow-strength) var(--header-glow-color1), 0 0 calc(var(--glow-strength) * 2) var(--header-glow-color2);
+    }
+    to {
+        text-shadow: 0 0 calc(var(--glow-strength) * 1.2) var(--header-glow-color3), 0 0 calc(var(--glow-strength) * 2.5) var(--header-glow-color1), 0 0 calc(var(--glow-strength) * 3) var(--header-glow-color2);
+    }
+}
+nav {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+nav button {
+    background: none;
+    border: 2px solid var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 40px;
+    box-shadow: none; /* Убран блеск */
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    /* Добавлено для выравнивания размера кнопок */
+    min-width: 180px; /* Минимальная ширина для единообразия */
+    text-align: center;
+}
+/* Удалены правила для nav button::before */
+nav button:hover, nav button.active {
+    background: var(--secondary-color);
+    color: #fff;
+    box-shadow: 0 0 30px var(--accent-color), 0 0 50px var(--primary-color) inset;
+    transform: translateY(-3px);
+}
+main {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    animation: fadeInContent 1s ease-out forwards;
+}
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.product-grid { /* Стили для сетки продуктов */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.card {
+    background: var(--card-bg-color);
+    border-radius: 0; /* Прямоугольные карточки */
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--card-shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+/* Удалены правила для .card::before */
+.card:hover {
+    transform: translateY(-20px) scale(1.02);
+    box-shadow: 0 20px 45px var(--card-hover-shadow-color1), 0 0 60px var(--card-hover-shadow-color2);
+    background: var(--admin-bg-color); /* Используем админ-фон для ховера */
+}
+.card h3 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--secondary-color);
+    letter-spacing: 1px;
+}
+.desc {
+    flex-grow: 1; /* Это свойство заставляет описания растягиваться */
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--light-text-color); /* Используем light-text-color */
+    margin-bottom: 25px;
+}
+.price {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--price-glow-color);
+    margin-bottom: 20px;
+    animation: pulsePrice 2s infinite ease-in-out;
+}
+@keyframes pulsePrice {
+    0% { text-shadow: 0 0 15px var(--price-pulse-color1); }
+    50% { text-shadow: 0 0 25px var(--price-pulse-color2), 0 0 35px var(--price-pulse-color1); }
+    100% { text-shadow: 0 0 15px var(--price-pulse-color1); }
+}
+.btn-buy {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light-text-color); /* Используем light-text-color */
+    border-radius: 50px;
+    box-shadow: none; /* Убран блеск */
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 1px;
+}
+/* Удалены правила для .btn-buy::before */
+.btn-buy:hover {
+    box-shadow: 0 0 30px var(--btn-buy-hover-shadow-color1), 0 0 50px var(--btn-buy-hover-shadow-color2) inset;
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+    transform: translateY(-2px);
+}
+/* Добавлен стиль для кнопки "Куплено" */
+.btn-buy.purchased {
+    background: #555; /* Более темный или серый фон */
+    cursor: default;
+    box-shadow: none;
+    opacity: 0.7;
+    pointer-events: none; /* Отключаем события мыши */
+}
+/* Стиль для неактивной кнопки (например, недостаточно средств) */
+.btn-buy.disabled {
+    background: #777; /* Серый фон */
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+/* Секции: Мои файлы, Админка, Авторизация, Регистрация, Пополнение баланса, Отзывы, Пользователи в сети, Программы */
+#files-section, #admin-section, #login-section, #register-section, #topup-section, #reviews-section, #online-users-section, #programs-section {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    background: var(--admin-bg-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px var(--section-shadow-color);
+    color: var(--light-text-color); /* Используем light-text-color */
+    display: none;
+    animation: fadeInContent 1s ease-out forwards;
+}
+#files-section h2, #admin-section h2, #login-section h2, #register-section h2, #topup-section h2, #reviews-section h2, #online-users-section h2, #programs-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 20px var(--secondary-color);
+    font-size: 2.5rem;
+}
+/* Стили для списка файлов */
+#files-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#files-list li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+    display: flex; /* Для выравнивания кнопки */
+    justify-content: space-between; /* Для выравнивания кнопки */
+    align-items: center; /* Для выравнивания кнопки */
+}
+#files-list li:last-child {
+    border-bottom: none;
+}
+#files-list li .file-title {
+    color: var(--light-text-color); /* Используем light-text-color */
+    font-weight: 700;
+    text-decoration: none;
+    flex-grow: 1; /* Занимает все доступное пространство */
+}
+#files-list li .file-action-btn { /* Новый класс для кнопок в списке файлов */
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+    border-radius: 30px;
+    box-shadow: 0 0 10px var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px; /* Отступ от названия файла */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Чтобы применить padding */
+}
+#files-list li .file-action-btn:hover {
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: translateY(-1px);
+}
+
+/* Секция "Спасибо за покупку" */
+#thankyou {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    width: 90%;
+    background: var(--admin-bg-color);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.6rem;
+    box-shadow: 0 0 50px var(--thankyou-shadow-color1), 0 0 80px var(--thankyou-shadow-color2) inset;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+    border: 2px solid var(--thankyou-border-color);
+}
+#thankyou.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+#thankyou p {
+    color: var(--light-text-color);
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+#thankyou a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--accent-color);
+    border: 3px solid var(--accent-color);
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px var(--accent-color);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 1px;
+}
+#thankyou a:hover {
+    background: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 0 35px var(--primary-color);
+    transform: translateY(-3px);
+}
+/* Убрана кнопка копирования ссылки дискорда */
+#thankyou #copy-link {
+    display: none; /* Скрываем кнопку копирования */
+}
+#thankyou #close-thankyou {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+#thankyou #close-thankyou:hover {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+#discord-link {
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 50px;
+    background: var(--discord-bg); /* Используем переменную */
+    box-shadow: none; /* Убран блеск */
+    animation: none; /* Убрана анимация */
+    user-select: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#discord-link:hover {
+    box-shadow: 0 0 45px 10px var(--discord-hover-shadow-color1), 0 0 70px 16px var(--discord-hover-shadow-color2) inset;
+    transform: translateY(-3px);
+}
+/* Удален @keyframes flame */
+/* Админ панель и Авторизация */
+#admin-section label, #login-section label, #register-section label, #topup-section label, #programs-section label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: 700;
+    color: var(--light-text-color); /* Используем light-text-color */
+    font-size: 1.1rem;
+}
+#admin-section input[type="text"],
+#admin-section textarea,
+#admin-section select,
+#login-section input[type="text"],
+#login-section input[type="password"],
+#register-section input[type="text"],
+#register-section input[type="password"],
+#topup-section input[type="text"],
+#topup-section select,
+#programs-section input[type="text"],
+#programs-section textarea {
+    width: calc(100% - 30px);
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    resize: vertical;
+    background: rgba(255,255,255,0.1);
+    color: var(--light-text-color);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f973a1%22%20d%3D%22M287%2C197.3L159.7%2C69.9c-4.8-4.8-12.5-4.8-17.3%2C0L5.3%2C197.3c-4.8%2C4.8-4.8%2C12.5%2C0%2C17.3s12.5%2C4.8%2C17.3%2C0l128.7-128.7l128.7%2C128.7c4.8%2C4.8%2C12.5%2C4.8%2C17.3%2C0S291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E'); /* Стрелка для select */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+}
+/* Изменение цвета стрелки для тем */
+body.wolf-night-theme #admin-section select,
+body.wolf-night-theme #login-section select,
+body.wolf-night-theme #register-section select,
+body.wolf-night-theme #topup-section select,
+body.wolf-night-theme #programs-section select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e0e8f0%22%20d%3D%22M287%2C197.3L159.7%2C69.9c-4.8-4.8-12.5-4.8-17.3%2C0L5.3%2C197.3c-4.8%2C4.8-4.8%2C12.5%2C0%2C17.3s12.5%2C4.8%2C17.3%2C0l128.7-128.7l128.7%2C128.7c4.8%2C4.8%2C12.5%2C4.8%2C17.3%2C0S291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+}
+body.purple-mountain-theme #admin-section select,
+body.purple-mountain-theme #login-section select,
+body.purple-mountain-theme #register-section select,
+body.purple-mountain-theme #topup-section select,
+body.purple-mountain-theme #programs-section select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f0e6ff%22%20d%3D%22M287%2C197.3L159.7%2C69.9c-4.8-4.8-12.5-4.8-17.3%2C0L5.3%2C197.3c-4.8%2C4.8-4.8%2C12.5%2C0%2C17.3s12.5%2C4.8%2C17.3%2C0l128.7-128.7l128.7%2C128.7c4.8%2C4.8%2C12.5%2C4.8%2C17.3%2C0S291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+}
+body.green-forest-theme #admin-section select,
+body.green-forest-theme #login-section select,
+body.green-forest-theme #register-section select,
+body.green-forest-theme #topup-section select,
+body.green-forest-theme #programs-section select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23E6FFE6%22%20d%3D%22M287%2C197.3L159.7%2C69.9c-4.8-4.8-12.5-4.8-17.3%2C0L5.3%2C197.3c-4.8%2C4.8-4.8%2C12.5%2C0%2C17.3s12.5%2C4.8%2C17.3%2C0l128.7-128.7l128.7%2C128.7c4.8%2C4.8%2C12.5%2C4.8%2C17.3%2C0S291.8%2C202.1%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+}
+
+#admin-section input[type="text"]:focus,
+#admin-section textarea:focus,
+#admin-section select:focus,
+#login-section input[type="text"]:focus,
+#login-section input[type="password"]:focus,
+#register-section input[type="text"]:focus,
+#register-section input[type="password"]:focus,
+#topup-section input[type="text"]:focus,
+#topup-section select:focus,
+#programs-section input[type="text"]:focus,
+#programs-section textarea:focus {
+    outline: none;
+    box-shadow: inset 0 0 15px var(--input-focus-shadow1), 0 0 10px var(--input-focus-shadow2);
+}
+#admin-section button, #login-section button, #register-section button, #topup-section button, #programs-section button {
+    margin-top: 30px;
+    width: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    color: #fff;
+    border: none;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--secondary-color);
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+}
+#admin-section button:hover, #login-section button:hover, #register-section button:hover, #topup-section button:hover, #programs-section button:hover {
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+    box-shadow: 0 0 35px var(--primary-color);
+    transform: translateY(-2px);
+}
+/* Стили для секции отзывов */
+#reviews-section .review-form {
+    background: var(--review-form-bg); /* Используем переменную */
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px var(--review-form-shadow-color);
+}
+#reviews-section .review-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+#reviews-section .review-form input[type="text"],
+#reviews-section .review-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: var(--light-text-color);
+}
+#reviews-section .review-form button {
+    width: auto;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    margin-top: 0;
+}
+#reviews-section .reviews-list {
+    list-style: none;
+    padding: 0;
+}
+#reviews-section .reviews-list li {
+    background: var(--review-list-bg); /* Используем переменную */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px var(--review-list-shadow-color);
+    border-left: 5px solid var(--review-border-color);
+}
+#reviews-section .reviews-list li strong {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 5px;
+}
+#reviews-section .reviews-list li p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--light-text-color); /* Используем light-text-color */
+}
+#reviews-section .reviews-list li small {
+    display: block;
+    margin-top: 10px;
+    color: var(--accent-color); /* Используем accent-color */
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+/* Стили для секции "Пользователи в сети" */
+#online-users-section .users-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#online-users-section .users-list li {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 3px solid var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+#online-users-section .users-list li strong {
+    color: var(--light-text-color);
+}
+#online-users-section .users-list li .balance {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Стили для секции "Программы" */
+#programs-section .program-details {
+    background: var(--card-bg-color);
+    border-radius: 0;
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--card-shadow-color);
+    margin-bottom: 30px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+#programs-section .program-details h3 {
+    margin: 0 0 15px;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px var(--secondary-color);
+    letter-spacing: 1px;
+    text-align: center;
+}
+#programs-section .program-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--light-text-color);
+}
+#programs-section .program-details ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+#programs-section .program-details ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+#programs-section .program-details strong {
+    color: var(--primary-color);
+}
+#programs-section .program-details .price {
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--price-glow-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+#programs-section .program-details .btn-buy {
+    width: auto;
+    padding: 16px 40px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Всплывающие ошибки и уведомления */
+#error-message, #notification-message, #login-error-message, #register-error-message, #topup-error-message {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    display: none;
+    user-select: none;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    animation: slideInTop 0.5s ease-out forwards;
+}
+#error-message, #login-error-message, #register-error-message, #topup-error-message {
+    background: #a72d3f;
+    color: #fff;
+}
+#notification-message {
+    background: #28a745;
+    color: #fff;
+}
+@keyframes slideInTop {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Адаптив */
+@media(max-width: 768px) {
+    header {
+        font-size: 3.5rem;
+        letter-spacing: 6px;
+        padding: 50px 15px 30px;
+    }
+    nav {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    nav button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        min-width: unset; /* Сброс минимальной ширины для мобильных */
+    }
+    main {
+        padding: 0 15px;
+    }
+    .product-grid { /* Адаптация сетки продуктов */
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 25px;
+    }
+    .card h3 {
+        font-size: 1.6rem;
+    }
+    .desc {
+        font-size: 1rem;
+    }
+    .price {
+        font-size: 1.4rem;
+    }
+    .btn-buy {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+    #files-section, #admin-section, #login-section, #register-section, #topup-section, #reviews-section, #online-users-section, #programs-section, #thankyou {
+        padding: 25px;
+        border-radius: 15px;
+    }
+    #files-section h2, #admin-section h2, #login-section h2, #register-section h2, #topup-section h2, #reviews-section h2, #online-users-section h2, #programs-section h2 {
+        font-size: 2rem;
+    }
+    #thankyou p {
+        font-size: 1.3rem;
+    }
+    #thankyou a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+    #thankyou #close-thankyou {
+        font-size: 1.6rem;
+    }
+    #discord-link {
+        font-size: 1.4rem;
+        padding: 12px 25px;
+    }
+    #programs-section .program-details h3 {
+        font-size: 1.8rem;
+    }
+    #programs-section .program-details p, #programs-section .program-details ul li {
+        font-size: 0.95rem;
+    }
+    #programs-section .program-details .price {
+        font-size: 1.6rem;
+    }
+}
+@media(max-width: 480px) {
+    header {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        padding: 30px 10px 20px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav button {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .card h3 {
+        font-size: 1.4rem;
+    }
+    .price {
+        font-size: 1.2rem;
+    }
+    .btn-buy {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    #thankyou a, #thankyou #copy-link {
+        display: block;
+        margin: 15px auto 0;
+    }
+    #thankyou #copy-link {
+        margin-left: auto;
+    }
+    #programs-section .program-details h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Стили для секции Credits */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный темный фон */
+    color: var(--light-text-color);
+    font-size: 1rem;
+    border-top: 2px solid var(--secondary-color);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+    transition: background 0.8s ease, border-color 0.8s ease, box-shadow 0.8s ease;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+footer strong {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--accent-color);
+    transition: color 0.8s ease, text-shadow 0.8s ease;
+}
+
+/* Стили для копирайта */
+.copyright {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px; /* Отступ от футера */
+}
+
+
+/* Стили для модального окна чтения гайда */
+#read-guide-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Затемненный фон */
+    display: none; /* Скрыто по умолчанию */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Выше, чем ThankYou */
+    backdrop-filter: blur(5px); /* Размытие фона */
+    -webkit-backdrop-filter: blur(5px); /* Для Safari */
+    animation: fadeInModal 0.3s ease-out forwards;
+}
+
+#read-guide-modal.show {
+    display: flex;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#read-guide-content {
+    background: var(--admin-bg-color);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto; /* Прокрутка для длинного текста */
+    box-shadow: 0 0 50px var(--thankyou-shadow-color1), 0 0 80px var(--thankyou-shadow-color2);
+    position: relative;
+    color: var(--light-text-color);
+    user-select: none; /* Отключение выделения текста */
+    -webkit-user-select: none; /* Для Safari */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none; /* Для IE/Edge */
+    cursor: default; /* Курсор по умолчанию */
+}
+
+#read-guide-content h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    text-shadow: 0 0 15px var(--secondary-color);
+}
+
+#read-guide-text {
+    white-space: pre-wrap; /* Сохраняет переносы строк и пробелы */
+    line-height: 1.6;
+    font-size: 1.1rem;
+    padding: 10px; /* Небольшой отступ внутри */
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+
+#close-guide-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+#close-guide-modal:hover {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+
+/* Стили для отображения баланса */
+#user-info {
+    display: flex; /* Используем flexbox */
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    gap: 20px; /* Отступ между элементами */
+    max-width: 600px; /* Ограничиваем ширину */
+    margin: 20px auto 40px; /* Отступы */
+    padding: 15px 30px;
+    background: var(--card-bg-color); /* Используем фон карточки */
+    border-radius: 0; /* Прямоугольные углы */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* Тень */
+    color: var(--light-text-color);
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px var(--secondary-color);
+    transition: all 0.5s ease; /* Плавный переход */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Добавляем рамку */
+}
+#user-info strong {
+    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--accent-color);
+}
+#user-info button {
+    /* Стили для кнопок внутри user-info */
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--light-text-color);
+    border-radius: 0; /* Прямоугольные кнопки */
+    box-shadow: 0 0 10px var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+#user-info button:hover {
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: translateY(-1px);
+}
+
+/* Адаптация для user-info на маленьких экранах */
+@media(max-width: 768px) {
+    #user-info {
+        flex-direction: column; /* Элементы в столбик */
+        gap: 10px; /* Меньший отступ */
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    #user-info button {
+        width: 80%; /* Кнопки шире */
+        margin: 0 auto; /* Центрируем */
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Фоновая музыка -->
+<audio id="background-music" loop>
+    <source src="she_keeps_on_texting_me.mp3" type="audio/mpeg"> <!-- Убедитесь, что файл she_keeps_on_texting_me.mp3 находится в той же папке -->
+    Ваш браузер не поддерживает аудио элемент.
+</audio>
+
+<!-- Звук покупки -->
+<audio id="purchase-sound">
+    <source src="purchase_sound.mp3" type="audio/mpeg"> <!-- Убедитесь, что файл purchase_sound.mp3 находится в той же папке -->
+    Ваш браузер не поддерживает аудио элемент.
+</audio>
+
+<!-- Секция с кнопкой управления музыкой -->
+<div id="music-control" style="position: fixed; top: 10px; right: 10px; z-index: 1001;">
+    <button onclick="toggleMusic()" style="background: none; border: none; color: var(--primary-color); font-size: 1.5rem; cursor: pointer; text-shadow: 0 0 10px var(--secondary-color);">
+        <span id="music-icon">▶️</span> <!-- Иконка плей/паузы -->
+    </button>
+</div>
+
+<header>CELESTIAL.COM</header>
+<nav>
+  <button id="menu-home" class="active" data-section="home-section">Главная</button>
+  <button id="menu-programs" data-section="programs-section">Программы</button> <!-- НОВАЯ ВКЛАДКА -->
+  <button id="menu-files" data-section="files-section">Мои файлы</button>
+  <button id="menu-reviews" data-section="reviews-section">Отзывы</button>
+  <button id="menu-online-users" data-section="online-users-section">Пользователи в сети</button>
+  <button id="menu-admin" data-section="admin-section">Админка</button>
+  <button id="menu-login" data-section="login-section">Авторизоваться</button>
+  <button id="menu-register" data-section="register-section">Зарегистрироваться</button>
+  <button id="theme-toggle">Сменить тему</button>
+</nav>
+<main id="content">
+  <!-- Информация о пользователе и балансе -->
+  <div id="user-info" style="display: none;">
+    Привет, <strong id="current-username"></strong>! Ваш баланс: <strong id="user-balance">0</strong> ₽
+    <button onclick="showSection('topup-section')">Пополнить баланс</button>
+    <button onclick="logoutUser()">Выйти</button>
+  </div>
+
+  <!-- Главная страница (продукты будут генерироваться JS) -->
+  <section id="home-section" class="product-grid"></section>
+  <!-- Мои файлы -->
+  <section id="files-section">
+    <h2>Мои файлы</h2>
+    <ul id="files-list"></ul>
+  </section>
+  <!-- Отзывы -->
+  <section id="reviews-section">
+    <h2>Отзывы наших пользователей</h2>
+    <div id="reviews-content">
+        <!-- Динамический контент для отзывов -->
+        <div class="review-form">
+            <h3>Оставить отзыв</h3>
+            <label for="review-name">Ваше имя:</label>
+            <input type="text" id="review-name" placeholder="Аноним" />
+            <label for="review-text">Ваш отзыв:</label>
+            <textarea id="review-text" rows="5" placeholder="Напишите, что вы думаете о наших гайдах..."></textarea>
+            <button class="btn-buy" onclick="addReview()">Отправить отзыв</button>
+        </div>
+        <ul id="reviews-list" class="reviews-list"></ul>
+    </div>
+  </section>
+  <!-- Пользователи в сети (имитация) -->
+  <section id="online-users-section">
+    <h2>Пользователи в сети</h2>
+    <ul id="online-users-list" class="users-list">
+        <!-- Список пользователей будет генерироваться JS -->
+    </ul>
+  </section>
+  <!-- Секция Программы (новая) -->
+  <section id="programs-section">
+    <h2>Наши Программы</h2>
+    <div id="programs-list">
+        <!-- Программы будут генерироваться JS -->
+    </div>
+  </section>
+  <!-- Панель авторизации пользователя -->
+  <section id="login-section">
+    <h2>Вход в аккаунт</h2>
+    <div id="login-error-message" class="error-message" style="display: none;"></div>
+    <label for="login-username">Логин:</label>
+    <input type="text" id="login-username" placeholder="Введите ваш логин" />
+    <label for="login-password">Пароль:</label>
+    <input type="password" id="login-password" placeholder="Введите ваш пароль" />
+    <button onclick="loginUser()">Войти</button>
+    <p style="text-align: center; margin-top: 20px;">Нет аккаунта? <a href="#" onclick="showSection('register-section'); return false;" style="color: var(--primary-color); text-decoration: underline;">Зарегистрироваться</a></p>
+    <p class="admin-link" style="text-align: center; margin-top: 10px;">Администратор? <a href="#" onclick="showAdminLogin(); return false;" style="color: var(--accent-color); text-decoration: underline;">Войти как админ</a></p>
+  </section>
+  <!-- Панель регистрации пользователя -->
+  <section id="register-section">
+    <h2>Регистрация нового аккаунта</h2>
+    <div id="register-error-message" class="error-message" style="display: none;"></div>
+    <label for="register-first-name">Имя:</label>
+    <input type="text" id="register-first-name" placeholder="Ваше имя" />
+    <label for="register-last-name">Фамилия:</label>
+    <input type="text" id="register-last-name" placeholder="Ваша фамилия" />
+    <label for="register-username">Логин (для входа):</label>
+    <input type="text" id="register-username" placeholder="Придумайте логин" />
+    <label for="register-password">Пароль:</label>
+    <input type="password" id="register-password" placeholder="Придумайте пароль" />
+    <button onclick="registerUser()">Зарегистрироваться</button>
+    <p style="text-align: center; margin-top: 20px;">Уже есть аккаунт? <a href="#" onclick="showSection('login-section'); return false;" style="color: var(--primary-color); text-decoration: underline;">Войти</a></p>
+  </section>
+  <!-- Секция пополнения баланса для пользователя -->
+  <section id="topup-section">
+    <h2>Пополнить баланс</h2>
+    <div id="topup-error-message" class="error-message" style="display: none;"></div>
+    <p style="text-align: center; color: #FFD700; font-weight: bold;">
+        ВНИМАНИЕ: Это имитация платежа. Деньги не списываются и не зачисляются реально.
+        Все данные хранятся только в вашем браузере и могут быть легко изменены.
+    </p>
+    <label for="topup-amount">Сумма пополнения:</label>
+    <input type="text" id="topup-amount" placeholder="Введите сумму" />
+    <label for="topup-currency">Валюта:</label>
+    <select id="topup-currency">
+      <option value="RUB">Рубли (RUB)</option>
+      <option value="USD">Доллары (USD)</option>
+      <option value="EUR">Евро (EUR)</option>
+    </select>
+    <button onclick="processTopup()">Оплатить</button>
+  </section>
+  <!-- Админка (скрыта до авторизации) -->
+  <section id="admin-section">
+    <h2>Админ панель</h2>
+    <div id="error-message"></div>
+    <div id="notification-message"></div>
+    <button class="btn-buy" style="margin-bottom: 30px;" onclick="adminLogout()">Выйти из админки</button>
+
+    <h3>Добавить новый товар</h3>
+    <label for="new-title">Название товара</label>
+    <input type="text" id="new-title" placeholder="Например, 'Ультимативный гайд по JS'" />
+    <label for="new-desc">Описание товара</label>
+    <textarea id="new-desc" rows="3" placeholder="Краткое, но цепляющее описание"></textarea>
+    <label for="new-price">Цена (в ₽, 0 — бесплатно)</label>
+    <input type="text" id="new-price" placeholder="Например, 999" />
+    <label for="new-file-url">Ссылка на файл (необязательно, для скачивания)</label>
+    <input type="text" id="new-file-url" placeholder="Например, 'files/new-guide.pdf' (или оставьте пустым для текстового контента)" />
+    <label for="new-file-content">Текстовый контент файла (для TXT-гайдов, если нет ссылки)</label>
+    <textarea id="new-file-content" rows="5" placeholder="Введите здесь содержимое вашего текстового гайда."></textarea>
+    <button onclick="addProduct()">Добавить товар</button>
+
+    <hr style="margin: 40px 0; border-color: rgba(219, 39, 119, 0.5);">
+
+    <h3>Изменить существующий товар</h3>
+    <label for="edit-product-select">Выберите товар для редактирования:</label>
+    <select id="edit-product-select" onchange="loadProductForEdit()">
+      <option value="">-- Выберите товар --</option>
+    </select>
+
+    <label for="edit-title">Название товара</label>
+    <input type="text" id="edit-title" disabled />
+    <label for="edit-desc">Описание товара</label>
+    <textarea id="edit-desc" rows="3"></textarea>
+    <label for="edit-price">Цена (в ₽, 0 — бесплатно)</label>
+    <input type="text" id="edit-price" />
+    <label for="edit-file-url">Ссылка на файл</label>
+    <input type="text" id="edit-file-url" />
+    <label for="edit-file-content">Текстовый контент файла</label>
+    <textarea id="edit-file-content" rows="5"></textarea>
+    <button onclick="updateProduct()">Обновить товар</button>
+
+    <hr style="margin: 40px 0; border-color: rgba(219, 39, 119, 0.5);">
+
+    <h3>Управление балансом пользователя</h3>
+    <label for="balance-username">Логин пользователя:</label>
+    <input type="text" id="balance-username" placeholder="Введите логин пользователя" />
+    <label for="balance-amount">Сумма для пополнения (₽):</label>
+    <input type="text" id="balance-amount" placeholder="Например, 1000" />
+    <button onclick="addBalanceToUser()">Пополнить баланс</button>
+
+    <hr style="margin: 40px 0; border-color: rgba(219, 39, 119, 0.5);">
+
+    <h3>Получить данные всех пользователей (только для админа)</h3>
+    <p style="color: #FFD700; font-weight: bold;">
+        ВНИМАНИЕ: Данные будут выведены в консоль браузера (F12 -> Console).
+        Это не автоматическая отправка файла.
+    </p>
+    <button onclick="exportUsersData()">Вывести данные пользователей в консоль</button>
+  </section>
+</main>
+<div id="thankyou">
+  <div id="close-thankyou" onclick="closeThankYou()">×</div>
+  <p id="thankyou-message">Спасибо за покупку!</p>
+  <a id="download-link" href="#" target="_blank">Скачать</a>
+  <a id="discord-link" href="https://discord.gg/9QfX4yH6Ed" target="_blank" rel="noopener noreferrer">Связаться в Discord</a>
+</div>
+
+<!-- Модальное окно для чтения гайда -->
+<div id="read-guide-modal">
+    <div id="read-guide-content">
+        <div id="close-guide-modal" onclick="closeReadGuideModal()">×</div>
+        <h3 id="guide-modal-title"></h3>
+        <p style="color: #FFD700; font-weight: bold; text-align: center; margin-bottom: 20px;">
+            ВНИМАНИЕ: Копирование и скриншоты этого контента запрещены.
+            Повторные попытки приведут к штрафам с вашего баланса.
+        </p>
+        <pre id="read-guide-text"></pre>
+    </div>
+</div>
+
+<footer>
+    <p>Credits: <strong>tnmilashka240km</strong>, <strong>dude3522</strong>, <strong>nofrendsnolove</strong></p>
+</footer>
+<div class="copyright">
+    © 2024 CELESTIAL.COM. Все права защищены.
+</div>
+
+<script>
+  // --- Глобальные переменные и инициализация ---
+  const STORAGE_PRODUCTS_KEY = 'celestial_products';
+  const STORAGE_REVIEWS_KEY = 'celestial_reviews';
+  const STORAGE_ADMIN_AUTH_KEY = 'celestial_admin_auth';
+  const STORAGE_THEME_KEY = 'celestial_theme';
+  const STORAGE_USERS_KEY = 'celestial_users'; // Новый ключ для пользователей
+  const STORAGE_CURRENT_USER_KEY = 'celestial_current_user'; // Новый ключ для текущего пользователя
+
+  // ВНИМАНИЕ: В реальном проекте никогда не храните пароли в открытом виде на клиенте!
+  // Это сделано только для демонстрационных целей.
+  const ADMIN_USERNAME = 'celestial_admin_2024';
+  const ADMIN_PASSWORD = 'Secure@Celestial#G41d5';
+
+  const DISCORD_USERNAME = 'tnmilashka240km';
+
+  // Фиксированные курсы валют для имитации (1 USD = X RUB, 1 EUR = Y RUB)
+  const EXCHANGE_RATES = {
+      'USD': 90, // 1 USD = 90 RUB
+      'EUR': 100, // 1 EUR = 100 RUB
+      'RUB': 1    // 1 RUB = 1 RUB
+  };
+
+  let isAdminLoggedIn = JSON.parse(localStorage.getItem(STORAGE_ADMIN_AUTH_KEY)) || false;
+  let users = JSON.parse(localStorage.getItem(STORAGE_USERS_KEY) || '[]');
+  let currentUser = JSON.parse(localStorage.getItem(STORAGE_CURRENT_USER_KEY) || 'null'); // Текущий авторизованный пользователь
+
+  // Дефолтные гайды для главной страницы
+  const defaultProducts = [
+    {
+      id: 'pc-optimization-basics',
+      title: 'Основы Оптимизации ПК',
+      desc: 'Ускорь свой компьютер без лишних затрат. Базовые шаги для каждого.',
+      price: 0,
+      fileUrl: '',
+      fileContent: `Гайд: Основы Оптимизации ПК
+
+1.  **Удаление ненужных программ:** Через 'Панель управления' -> 'Программы и компоненты' или 'Настройки' -> 'Приложения'. Удалите все, чем не пользуетесь.
+2.  **Очистка временных файлов:** Нажмите Win+R, введите '%temp%', затем 'temp', и 'prefetch'. Удалите все файлы из этих папок (некоторые могут быть заняты, пропустите их).
+3.  **Управление автозагрузкой:** Откройте Диспетчер задач (Ctrl+Shift+Esc), перейдите на вкладку 'Автозагрузка'. Отключите программы, которые не должны запускаться вместе с Windows.
+4.  **Обновление Windows:** Убедитесь, что ваша система обновлена. Это важно для безопасности и производительности.
+5.  **Перезагрузка:** Простая перезагрузка может решить многие проблемы с производительностью, освобождая оперативную память.`
+    },
+    {
+      id: 'windows-speedup',
+      title: 'Windows: Максимальная Скорость',
+      desc: 'Глубокая настройка Windows для пиковой производительности в играх и работе.',
+      price: 990,
+      fileUrl: '',
+      fileContent: `Гайд: Windows - Максимальная Скорость
+
+1.  **Отключение ненужных служб:** Win+R, 'services.msc'. Отключите службы, которые вам не нужны (например, 'Служба факсов', 'Биометрическая служба Windows').
+2.  **Очистка диска:** Win+R, 'cleanmgr'. Выберите системный диск, нажмите 'Очистить системные файлы' и отметьте все ненужные пункты.
+3.  **Настройка электропитания:** 'Панель управления' -> 'Электропитание'. Выберите 'Высокая производительность' или 'Максимальная производительность'.
+4.  **Отключение визуальных эффектов:** Win+Pause/Break -> 'Дополнительные параметры системы' -> 'Производительность' -> 'Параметры'. Выберите 'Обеспечить наилучшее быстродействие'.
+5.  **Управление автозагрузкой:** Диспетчер задач (Ctrl+Shift+Esc) -> 'Автозагрузка'. Отключите программы, которые не должны запускаться вместе с Windows.`
+    },
+    {
+      id: 'driver-update-guide',
+      title: 'Гайд по Обновлению Драйверов',
+      desc: 'Как правильно обновлять драйверы видеокарты, чипсета и других устройств для стабильности и FPS.',
+      price: 750,
+      fileUrl: '',
+      fileContent: `Гайд: Обновление Драйверов
+
+1.  **Определите свои компоненты:** Используйте GPU-Z для видеокарты, CPU-Z для материнской платы.
+2.  **Скачивание драйверов:** Загружайте только с официальных сайтов производителей (NVIDIA, AMD, Intel, ASUS, MSI, Gigabyte и т.д.).
+3.  **Чистая установка драйверов видеокарты:** Используйте DDU (Display Driver Uninstaller) для полного удаления старых драйверов в безопасном режиме. Затем установите новые.
+4.  **Регулярность:** Обновляйте драйверы видеокарты при выходе новых игр. Драйверы чипсета и других устройств - реже, только при проблемах.`
+    },
+    {
+      id: 'ssd-optimization',
+      title: 'SSD: Продление Жизни и Скорость',
+      desc: 'Настройка SSD для максимальной производительности и долговечности. Необходимые твики.',
+      price: 1100,
+      fileUrl: '',
+      fileContent: `Гайд: SSD - Продление Жизни и Скорость
+
+1.  **Отключение дефрагментации:** SSD не нуждаются в дефрагментации. Windows 10/11 автоматически отключает её для SSD.
+2.  **Отключение индексирования:** ПКМ по диску SSD -> 'Свойства' -> снимите галочку 'Разрешить индексировать содержимое файлов...'.
+3.  **Отключение Superfetch/Prefetch:** Win+R, 'regedit'. Перейдите к HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters. Измените 'EnablePrefetcher' и 'EnableSuperfetch' на 0.
+4.  **Проверка режима AHCI:** Убедитесь, что ваш SSD работает в режиме AHCI в BIOS/UEFI.
+5.  **Оставьте свободное место:** Старайтесь оставлять 15-20% свободного места на SSD.`
+    },
+    {
+      id: 'ram-optimization',
+      title: 'Оптимизация ОЗУ: Больше Свободной Памяти',
+      desc: 'Как освободить оперативную память и избежать её утечек. Для геймеров и многозадачников.',
+      price: 800,
+      fileUrl: '',
+      fileContent: `Гайд: Оптимизация ОЗУ - Больше Свободной Памяти
+
+1.  **Закрытие фоновых приложений:** Закрывайте все, что не используете (браузеры, мессенджеры).
+2.  **Управление автозагрузкой:** Диспетчер задач (Ctrl+Shift+Esc) -> 'Автозагрузка'. Отключите ненужные программы.
+3.  **Отключение Superfetch/SysMain:** Win+R, 'services.msc'. Найдите службу 'SysMain' (ранее Superfetch). ПКМ -> 'Свойства' -> 'Отключена'.
+4.  **Настройка файла подкачки:** ПКМ по 'Этот компьютер' -> 'Свойства' -> 'Дополнительные параметры системы' -> 'Производительность' -> 'Параметры' -> 'Виртуальная память' -> 'Изменить'. Рекомендуется 'Размер по выбору системы'.`
+    },
+    {
+      id: 'cpu-gpu-overclocking',
+      title: 'Разгон CPU и GPU: Безопасный Буст',
+      desc: 'Пошаговый гайд по безопасному разгону процессора и видеокарты для максимальной производительности.',
+      price: 1800,
+      fileUrl: '',
+      fileContent: `Гайд: Разгон CPU и GPU - Безопасный Буст
+
+ВНИМАНИЕ: Разгон может привести к нестабильности. Действуйте на свой страх и риск!
+
+1.  **Подготовка:** Хорошее охлаждение, качественный БП, программы для мониторинга (HWMonitor, MSI Afterburner), стресс-тесты (Prime95, FurMark).
+2.  **Разгон CPU (через BIOS/UEFI):** Увеличивайте множитель CPU понемногу. Тестируйте стабильность. При необходимости, немного увеличивайте напряжение (Vcore). Следите за температурой!
+3.  **Разгон GPU (через MSI Afterburner):** Увеличивайте Core Clock по 10-20 МГц. Тестируйте стабильность. Увеличивайте Memory Clock по 50-100 МГц. Следите за температурой и артефактами.`
+    },
+    {
+      id: 'network-optimization',
+      title: 'Оптимизация Сети: Меньше Лагов',
+      desc: 'Настройка сетевых параметров для снижения пинга и повышения стабильности соединения.',
+      price: 600,
+      fileUrl: '',
+      fileContent: `Гайд: Оптимизация Сети - Меньше Лагов
+
+1.  **Проводное соединение:** Ethernet-кабель всегда лучше Wi-Fi.
+2.  **Обновление драйверов сетевой карты:** Скачайте последние драйверы с сайта производителя.
+3.  **Настройка DNS-серверов:** Используйте быстрые DNS-серверы (Google DNS: 8.8.8.8, 8.8.4.4 или Cloudflare: 1.1.1.1, 1.0.0.1).
+4.  **Отключение QoS в Windows:** Win+R, 'gpedit.msc' (для Pro/Enterprise). 'Конфигурация компьютера' -> 'Административные шаблоны' -> 'Сеть' -> 'Планировщик пакетов QoS'. Отключите 'Ограничить резервируемую пропускную способность'.
+5.  **Настройка роутера:** Обновите прошивку. Используйте QoS на роутере для приоритизации игрового трафика.`
+    },
+    {
+      id: 'registry-cleanup',
+      title: 'Чистка Реестра: Осторожно и Эффективно',
+      desc: 'Как безопасно очистить системный реестр от мусора и ошибок.',
+      price: 500,
+      fileUrl: '',
+      fileContent: `Гайд: Чистка Реестра - Осторожно и Эффективно
+
+ВНИМАНИЕ: Неправильная работа с реестром может повредить систему. Всегда делайте резервные копии!
+
+1.  **Резервное копирование реестра:** Win+R, 'regedit' -> 'Файл' -> 'Экспорт'.
+2.  **Использование проверенных программ:** CCleaner, Wise Registry Cleaner.
+3.  **Ручная чистка (для продвинутых):** Только если точно знаете, что делаете. Удаляйте остатки программ или неиспользуемые ключи.`
+    },
+    {
+      id: 'gaming-optimization',
+      title: 'Оптимизация ПК для Игр',
+      desc: 'Секреты настройки Windows и игр для максимального FPS и плавности.',
+      price: 1300,
+      fileUrl: '',
+      fileContent: `Гайд: Оптимизация ПК для Игр
+
+1.  **Обновление драйверов видеокарты:** Всегда используйте последние версии.
+2.  **Игровой режим Windows:** 'Настройки' -> 'Игры' -> 'Игровой режим'. Включите.
+3.  **Настройка графики в играх:** Снижайте качество теней, отражений, сглаживания. Отключите V-Sync, если нет G-Sync/FreeSync.
+4.  **Настройка панели управления видеокарты:** В NVIDIA Control Panel / AMD Radeon Software установите 'Предпочтителен режим максимальной производительности', 'Фильтрация текстур - Высокая производительность'.
+5.  **Очистка временных файлов:** Win+R, '%temp%', 'temp', 'prefetch'. Удалите все.`
+    },
+    {
+      id: 'cooling-maintenance',
+      title: 'Охлаждение и Обслуживание ПК',
+      desc: 'Как чистить ПК от пыли, менять термопасту и следить за температурами.',
+      price: 200, // Изменено на 200₽
+      fileUrl: '',
+      fileContent: `Гайд: Охлаждение и Обслуживание ПК
+
+1.  **Чистка от пыли:** Регулярно (раз в 3-6 месяцев) чистите ПК от пыли сжатым воздухом.
+2.  **Замена термопасты:** Меняйте термопасту на CPU и GPU раз в 1-3 года. Используйте изопропиловый спирт для удаления старой пасты.
+3.  **Мониторинг температур:** Используйте HWMonitor, MSI Afterburner. Нормальные температуры под нагрузкой: CPU до 85°C, GPU до 80°C.`
+    },
+    {
+      id: 'power-supply-optimization',
+      title: 'Блок Питания: Выбор и Настройка',
+      desc: 'Как выбрать правильный БП и настроить его для стабильной работы системы.',
+      price: 120, // Изменено на 120₽
+      fileUrl: '',
+      fileContent: `Гайд: Блок Питания - Выбор и Настройка
+
+1.  **Выбор мощности:** Используйте онлайн-калькуляторы. Добавьте запас 15-20%.
+2.  **Сертификация 80 PLUS:** Выбирайте БП с сертификатом 80 PLUS Bronze, Gold, Platinum или Titanium.
+3.  **Модульность:** Модульные БП улучшают кабель-менеджмент.
+4.  **Настройка электропитания в Windows:** 'Панель управления' -> 'Электропитание'. * Выберите 'Высокая производительность' или 'Максимальная производительность'. * В дополнительных параметрах питания убедитесь, что 'Минимальное состояние процессора' установлено на 100% для максимальной производительности.`
+    },
+    {
+      id: 'bios-uefi-optimization',
+      title: 'BIOS/UEFI: Секреты Настройки',
+      desc: 'Полный гайд по настройке BIOS/UEFI для оптимизации производительности ПК.',
+      price: 140, // Изменено на 140₽
+      fileUrl: '',
+      fileContent: `Гайд: BIOS/UEFI - Секреты Настройки
+
+ВНИМАНИЕ: Неправильные настройки BIOS/UEFI могут привести к нестабильности.
+
+1.  **Обновление BIOS/UEFI:** Скачайте последнюю версию с сайта производителя материнской платы.
+2.  **Включение XMP/DOCP профиля для ОЗУ:** В BIOS найдите 'XMP' или 'DOCP' и выберите профиль.
+3.  **Режим работы SATA:** Убедитесь, что SATA-контроллер работает в режиме AHCI для SSD.
+4.  **Отключение ненужных контроллеров:** Отключите неиспользуемые встроенные контроллеры (звук, Wi-Fi, Bluetooth).
+5.  **Настройка вентиляторов:** В BIOS настройте кривые скорости вентиляторов для баланса шума и охлаждения.`
+    },
+    {
+      id: 'full-pc-optimization',
+      title: 'Полная Оптимизация ПК: Программа',
+      desc: 'Комплексная программа для максимальной производительности вашего ПК. Включает все аспекты.',
+      price: 2500,
+      fileUrl: '',
+      fileContent: `Гайд: Полная Оптимизация ПК - Программа
+
+Этот гайд включает в себя все лучшие практики из предыдущих гайдов, а также дополнительные шаги для достижения максимальной производительности и стабильности вашей системы.
+
+**Часть 1: Базовая Очистка и Настройка**
+1.  **Удаление Bloatware:** Полное удаление предустановленных ненужных программ и приложений Windows.
+2.  **Глубокая очистка диска:** Использование встроенных инструментов и сторонних утилит для удаления всех видов временных файлов, кэша, старых обновлений.
+3.  **Оптимизация автозагрузки:** Отключение всех некритичных программ из автозагрузки.
+4.  **Настройка электропитания:** Переключение на режим "Максимальная производительность" и тонкая настройка его параметров.
+5.  **Отключение ненужных служб Windows:** Подробный список служб, которые можно безопасно отключить для экономии ресурсов.
+
+**Часть 2: Драйверы и Система**
+1.  **Чистая установка драйверов видеокарты:** Пошаговая инструкция с использованием DDU.
+2.  **Обновление драйверов чипсета и других устройств:** Как найти и установить актуальные драйверы.
+3.  **Оптимизация SSD:** Проверка режима AHCI, отключение индексирования и дефрагментации, рекомендации по свободному месту.
+4.  **Настройка файла подкачки:** Оптимальные размеры и расположение файла подкачки.
+5.  **Оптимизация реестра:** Использование безопасных методов очистки реестра.
+
+**Часть 3: Сеть и Игры**
+1.  **Оптимизация сетевых параметров:** Настройка DNS, отключение QoS, рекомендации по роутеру.
+2.  **Настройка графики в играх:** Общие рекомендации по снижению нагрузки на GPU без значительной потери качества.
+3.  **Настройка панели управления видеокарты:** Детальные параметры для NVIDIA и AMD.
+4.  **Игровой режим Windows и Game Bar:** Оптимальные настройки для игрового процесса.
+
+**Часть 4: Продвинутые Твики и Обслуживание**
+1.  **Разгон CPU и GPU (безопасный):** Пошаговые инструкции с акцентом на мониторинг температур и стабильность.
+2.  **Настройка BIOS/UEFI:** Включение XMP/DOCP, настройка вентиляторов, отключение неиспользуемых контроллеров.
+3.  **Регулярное обслуживание:** График чистки ПК от пыли, рекомендации по замене термопасты.
+4.  **Мониторинг системы:** Рекомендуемые программы для отслеживания температур, загрузки CPU/GPU/RAM.
+
+Этот гайд предоставит вам все необходимые инструменты и знания для того, чтобы ваш ПК работал на пике своих возможностей.`
+    },
+    {
+      id: 'windows-boot-speedup',
+      title: 'Ускорение Загрузки Windows',
+      desc: 'Сократите время запуска вашей операционной системы до минимума.',
+      price: 450,
+      fileUrl: '',
+      fileContent: `Гайд: Ускорение Загрузки Windows
+
+1.  **Отключение Fast Startup (Быстрый запуск):**
+    *   'Панель управления' -> 'Электропитание' -> 'Действия кнопок питания' -> 'Изменение параметров, которые сейчас недоступны'.
+    *   Снимите галочку с 'Включить быстрый запуск (рекомендуется)'. Это может помочь при проблемах с драйверами или двойной загрузкой.
+
+2.  **Управление автозагрузкой:**
+    *   Диспетчер задач (Ctrl+Shift+Esc) -> вкладка 'Автозагрузка'.
+    *   Отключите все ненужные программы, которые запускаются вместе с Windows. Оставляйте только антивирус и критически важные системные утилиты.
+
+3.  **Проверка на вирусы и вредоносное ПО:**
+    *   Вредоносные программы могут значительно замедлять загрузку. Проведите полное сканирование системы антивирусом.
+
+4.  **Обновление драйверов:**
+    *   Устаревшие или поврежденные драйверы могут вызывать задержки. Убедитесь, что все драйверы актуальны, особенно для чипсета и накопителей.
+
+5.  **Перенос системы на SSD:**
+    *   Если у вас HDD, переход на SSD кардинально ускорит загрузку Windows. Это самое эффективное решение.
+
+6.  **Очистка системного диска:**
+    *   Регулярно используйте 'Очистку диска' (cleanmgr) для удаления временных файлов и старых обновлений Windows.
+
+7.  **Проверка целостности системных файлов:**
+    *   Запустите командную строку от имени администратора и выполните команду \`sfc /scannow\`. Это проверит и восстановит поврежденные системные файлы.
+`
+    },
+    {
+      id: 'game-graphics-optimization',
+      title: 'Оптимизация Игровых Настроек',
+      desc: 'Тонкая настройка графики в играх для лучшего FPS без сильной потери качества.',
+      price: 850,
+      fileUrl: '',
+      fileContent: `Гайд: Оптимизация Игровых Настроек
+
+Этот гайд поможет вам найти баланс между качеством графики и производительностью в играх.
+
+1.  **Понимание основных настроек графики:**
+    *   **Разрешение:** Всегда старайтесь использовать нативное разрешение монитора. Снижение разрешения сильно ухудшает картинку.
+    *   **Масштаб разрешения (Render Scale):** Если FPS низкий, попробуйте снизить этот параметр до 80-90%. Картинка станет немного мыльной, но производительность вырастет.
+    *   **Качество текстур:** Влияет на объем видеопамяти (VRAM). Если VRAM хватает, ставьте высокое. Если нет - снижайте.
+    *   **Качество теней:** Один из самых ресурсоемких параметров. Снижайте в первую очередь.
+    *   **Отражения:** Также очень требовательны. Снижайте или отключайте.
+    *   **Сглаживание (Anti-Aliasing):** Сглаживает "лесенки". FXAA, TAA менее требовательны, чем MSAA. Если FPS критичен, отключайте.
+    *   **Дальность прорисовки (View Distance):** Влияет на детализацию объектов на расстоянии. Снижение может дать прирост FPS.
+    *   **Объемное освещение (Volumetric Lighting), Глубина резкости (Depth of Field), Размытие в движении (Motion Blur):** Эти эффекты часто сильно нагружают GPU и могут быть отключены без потери геймплея.
+
+2.  **Порядок оптимизации:**
+    *   Начните с низких настроек, затем постепенно повышайте те, что меньше всего влияют на FPS (например, качество текстур, если VRAM позволяет).
+    *   Всегда тестируйте изменения в игре, используя встроенные бенчмарки или просто играя в динамичных сценах.
+
+3.  **Настройки драйверов видеокарты:**
+    *   **NVIDIA Control Panel:**
+        *   'Режим управления электропитанием': 'Предпочтителен режим максимальной производительности'.
+        *   'Фильтрация текстур - Качество': 'Высокая производительность'.
+        *   'Вертикальный синхроимпульс': 'Выкл.' (если нет G-Sync/FreeSync и нужен максимальный FPS).
+    *   **AMD Radeon Software:**
+        *   'Radeon Anti-Lag', 'Radeon Boost': Могут помочь снизить задержку и повысить FPS.
+        *   'Texture Filtering Quality': 'Performance'.
+
+4.  **Мониторинг FPS и температур:**
+    *   Используйте MSI Afterburner (с RivaTuner Statistics Server) или встроенные счетчики FPS в играх (Steam, Origin, Epic Games).
+    *   Следите за температурой GPU и CPU, чтобы избежать троттлинга.
+
+5.  **Обновление игры и Windows:**
+    *   Разработчики часто выпускают патчи, улучшающие производительность. Убедитесь, что игра и Windows обновлены.
+`
+    }
+  ];
+
+  // Отдельный массив для программ
+  const programsProducts = [
+    {
+      id: 'celestial-optimisation-program',
+      title: 'Celestial Optimisation',
+      desc: 'Наша эксклюзивная программа для максимальной оптимизации ПК. Автоматизирует многие процессы.',
+      price: 700, // Цена изменена на 700 рублей
+      fileUrl: '', // Предполагается, что это текстовый гайд или ссылка на скачивание программы
+      fileContent: `## Celestial Optimisation - Ваша программа для максимальной производительности!
+
+Добро пожаловать в мир беспрецедентной скорости и стабильности с Celestial Optimisation! Эта программа разработана для автоматизации и упрощения множества процессов оптимизации, описанных в наших гайдах, позволяя вам получить максимум от вашего ПК без глубоких технических знаний.
+
+**Основные функции Celestial Optimisation:**
+
+1.  **Автоматическая очистка системы:**
+    *   Удаление временных файлов Windows и приложений.
+    *   Очистка кэша браузеров и системных журналов.
+    *   Оптимизация корзины и точек восстановления.
+
+2.  **Управление автозагрузкой:**
+    *   Интуитивно понятный интерфейс для включения/отключения программ в автозагрузке.
+    *   Рекомендации по программам, которые можно безопасно отключить для ускорения загрузки системы.
+
+3.  **Оптимизация служб Windows:**
+    *   Предварительно настроенные профили для игрового режима, рабочего режима и режима экономии энергии.
+    *   Возможность ручной настройки и отключения ненужных служб, потребляющих ресурсы в фоновом режиме.
+
+4.  **Настройка электропитания:**
+    *   Быстрое переключение между схемами электропитания для мгновенного изменения производительности.
+    *   Тонкая настройка параметров для достижения максимальной производительности или энергоэффективности.
+
+5.  **Оптимизация сети:**
+    *   Автоматическая настройка DNS-серверов для минимального пинга и более стабильного интернет-соединения.
+    *   Отключение QoS (Quality of Service) в системе для приоритезации игрового трафика.
+
+6.  **Мониторинг системы в реальном времени:**
+    *   Отображение загрузки CPU, GPU, RAM и дисков.
+    *   Контроль температур компонентов для предотвращения перегрева и троттлинга.
+
+7.  **Рекомендации и отчеты:**
+    *   Программа анализирует вашу систему и предлагает индивидуальные рекомендации по дальнейшей оптимизации.
+    *   Генерирует подробные отчеты о проделанной работе и достигнутых улучшениях производительности.
+
+**Системные требования:**
+
+*   **Операционная система:** Windows 10 (версия 1903 или новее), Windows 11.
+*   **Процессор:** Двухъядерный процессор с частотой 2 ГГц или выше.
+*   **Оперативная память:** 2 ГБ ОЗУ (рекомендуется 4 ГБ и более).
+*   **Место на диске:** 100 МБ свободного места.
+*   **Дополнительно:** .NET Framework 4.8 или новее.
+
+**Как использовать Celestial Optimisation:**
+
+1.  **Скачайте программу:** После покупки вы получите ссылку на скачивание исполняемого файла (.exe).
+2.  **Установка:** Запустите установочный файл и следуйте инструкциям на экране.
+3.  **Запуск от имени администратора:** Для корректной работы и применения всех оптимизаций, всегда запускайте программу с правами администратора.
+4.  **Выберите профиль оптимизации:** В главном окне программы выберите один из предустановленных профилей (например, "Игровой режим" для максимального FPS) или настройте параметры вручную.
+5.  **Нажмите "Оптимизировать":** Программа автоматически применит выбранные настройки.
+6.  **Перезагрузите ПК:** Для применения всех изменений и достижения максимального эффекта рекомендуется перезагрузить компьютер.
+
+**Важные советы:**
+
+*   **Создайте точку восстановления:** Перед первым использованием программы, а также перед крупными изменениями, настоятельно рекомендуется создать точку восстановления системы. Это позволит вам легко откатить систему в случае непредвиденных проблем.
+*   **Регулярное использование:** Запускайте Celestial Optimisation регулярно (например, раз в неделю или перед началом игровой сессии) для поддержания оптимальной производительности.
+*   **Следите за обновлениями:** Мы постоянно работаем над улучшением программы. Убедитесь, что у вас установлена последняя версия, чтобы получать новые функции и улучшения.
+
+**Преимущества Celestial Optimisation:**
+
+*   **Простота использования:** Интуитивно понятный интерфейс, не требующий глубоких технических знаний.
+*   **Комплексная оптимизация:** Охватывает все ключевые аспекты производительности ПК.
+*   **Безопасность:** Разработана с учетом стабильности системы, но всегда рекомендуется создавать точки восстановления.
+*   **Экономия времени:** Автоматизирует рутинные задачи по оптимизации.
+
+Celestial Optimisation - ваш ключ к беспрецедентной скорости и стабильности ПК!
+`
+    }
+  ];
+
+
+  // Объединяем все продукты в один массив для удобства управления в админке
+  // Но для рендеринга на главной и в программах будем использовать отдельные массивы
+  let allProducts = [...defaultProducts, ...programsProducts];
+
+  // Загружаем продукты из localStorage, если они есть, иначе используем дефолтные
+  // При этом, если в localStorage нет Celestial Optimisation, добавляем его из programsProducts
+  let storedProducts = JSON.parse(localStorage.getItem(STORAGE_PRODUCTS_KEY));
+  if (!storedProducts || storedProducts.length === 0) {
+      products = defaultProducts; // На главной будут только дефолтные
+      localStorage.setItem(STORAGE_PRODUCTS_KEY, JSON.stringify(allProducts)); // В localStorage сохраняем все
+  } else {
+      products = storedProducts.filter(p => !programsProducts.some(pp => pp.id === p.id)); // На главной - все, кроме программ
+      // Убедимся, что programsProducts всегда актуальны из кода, а не из localStorage,
+      // чтобы их подробности и цена были фиксированными.
+      // Если Celestial Optimisation уже есть в storedProducts, используем его, иначе добавляем из programsProducts.
+      const celestialOptimisationInStorage = storedProducts.find(p => p.id === 'celestial-optimisation-program');
+      if (!celestialOptimisationInStorage) {
+          allProducts = [...storedProducts, ...programsProducts];
+          localStorage.setItem(STORAGE_PRODUCTS_KEY, JSON.stringify(allProducts));
+      } else {
+          allProducts = storedProducts; // Используем то, что в хранилище
+      }
+  }
+
+
+  let reviews = JSON.parse(localStorage.getItem(STORAGE_REVIEWS_KEY) || '[]');
+
+  // --- Функции для смены темы ---
+
+  // Обновленный список тем
+  const themes = ['light', 'wolf-night', 'purple-mountain', 'green-forest']; // Обновлен список тем
+  let currentThemeIndex = 0; // Индекс текущей темы
+
+  /**
+   * Устанавливает тему сайта.
+   * @param {string} themeName - 'light', 'wolf-night', 'purple-mountain' или 'green-forest'.
+   */
+  function setTheme(themeName) {
+    const body = document.body;
+    // Удаляем все классы тем
+    themes.forEach(theme => body.classList.remove(`${theme}-theme`));
+
+    if (themeName !== 'light') { // 'light' тема не имеет специального класса, это дефолт
+      body.classList.add(`${themeName}-theme`);
+    }
+    localStorage.setItem(STORAGE_THEME_KEY, themeName); // Сохраняем выбранную тему
+    currentThemeIndex = themes.indexOf(themeName); // Обновляем индекс
+  }
+
+  /**
+   * Переключает тему сайта на следующую в списке.
+   */
+  function toggleTheme() {
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+    setTheme(themes[currentThemeIndex]);
+  }
+
+  // --- Функции отображения секций ---
+
+  /**
+   * Отображает выбранную секцию и обновляет активную кнопку меню.
+   * @param {string} sectionId - ID секции для отображения (e.g., 'home-section').
+   */
+  function showSection(sectionId) {
+    const sections = ['home-section', 'files-section', 'reviews-section', 'login-section', 'register-section', 'admin-section', 'topup-section', 'online-users-section', 'programs-section'];
+    sections.forEach(id => {
+      const sectionElement = document.getElementById(id);
+      if (sectionElement) {
+        sectionElement.style.display = 'none'; // Скрываем все по умолчанию
+      }
+    });
+
+    // Обновляем активную кнопку меню (кроме кнопки смены темы)
+    document.querySelectorAll('nav button:not(#theme-toggle)').forEach(btn => btn.classList.remove('active'));
+    const menuButton = document.querySelector(`nav button[data-section="${sectionId}"]`);
+    if (menuButton) {
+      menuButton.classList.add('active');
+    }
+
+    // Специальная логика для админки и авторизации
+    if (sectionId === 'admin-section') {
+      if (isAdminLoggedIn) {
+        document.getElementById('admin-section').style.display = 'block';
+        populateProductSelect(); // Обновляем список товаров для редактирования
+      } else {
+        // Если админ не авторизован, показываем обычную форму логина
+        document.getElementById('login-section').style.display = 'block';
+        // И скрываем админ-ссылку в логине, чтобы не было путаницы
+        document.querySelector('#login-section .admin-link').style.display = 'block'; // Показываем ссылку на админ-логин
+        // Убедимся, что кнопка "Войти" в секции логина по умолчанию вызывает loginUser
+        document.querySelector('#login-section button').onclick = loginUser;
+      }
+    } else if (sectionId === 'login-section' || sectionId === 'register-section' || sectionId === 'topup-section') {
+        // Для логина/регистрации/пополнения всегда показываем их
+        document.getElementById(sectionId).style.display = 'block';
+        // Скрываем админ-ссылку в логине, если мы не пытаемся войти как админ
+        if (sectionId === 'login-section') {
+            document.querySelector('#login-section .admin-link').style.display = 'block';
+            // Убедимся, что кнопка "Войти" в секции логина по умолчанию вызывает loginUser
+            document.querySelector('#login-section button').onclick = loginUser;
+        }
+    } else if (sectionId === 'reviews-section') {
+        // Раздел отзывов теперь всегда доступен для просмотра и добавления
+        document.getElementById('reviews-section').style.display = 'block';
+        // Обновляем имя в форме отзыва, если пользователь авторизован
+        const reviewNameInput = document.getElementById('review-name');
+        if (reviewNameInput) {
+            reviewNameInput.value = currentUser ? currentUser.firstName : '';
+        }
+        renderReviews(); // Рендерим отзывы
+    } else if (sectionId === 'online-users-section') { // Новая секция
+        document.getElementById('online-users-section').style.display = 'block';
+        renderOnlineUsers(); // Рендерим список пользователей
+    }
+    else if (sectionId === 'programs-section') { // Новая секция "Программы"
+        document.getElementById('programs-section').style.display = 'block';
+        renderPrograms(); // Рендерим программы
+    }
+    else {
+      // Для всех остальных секций
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.style.display = (sectionId === 'home-section' ? 'grid' : 'block');
+      }
+    }
+
+    // Скрываем сообщения об ошибках/уведомлениях при смене секции
+    hideMessage('error-message');
+    hideMessage('notification-message');
+    hideMessage('login-error-message');
+    hideMessage('register-error-message');
+    hideMessage('topup-error-message');
+  }
+
+  /**
+   * Показывает форму входа для администратора (отдельная кнопка).
+   */
+  function showAdminLogin() {
+      const loginSection = document.getElementById('login-section');
+      loginSection.style.display = 'block';
+      // Скрываем ссылку на админ-логин, чтобы не было рекурсии
+      document.querySelector('#login-section .admin-link').style.display = 'none';
+      document.getElementById('login-username').value = '';
+      document.getElementById('login-password').value = '';
+      document.getElementById('login-error-message').textContent = 'Введите данные администратора.';
+      document.getElementById('login-error-message').style.display = 'block';
+      // Меняем обработчик кнопки "Войти" на админ-логин
+      document.querySelector('#login-section button').onclick = adminLogin;
+  }
+
+  /**
+   * Авторизация администратора.
+   */
+  function adminLogin() {
+      const usernameInput = document.getElementById('login-username');
+      const passwordInput = document.getElementById('login-password');
+      const loginErrorMsg = document.getElementById('login-error-message');
+
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+          isAdminLoggedIn = true;
+          localStorage.setItem(STORAGE_ADMIN_AUTH_KEY, JSON.stringify(true));
+          showNotification('Вход выполнен успешно как администратор!');
+          usernameInput.value = '';
+          passwordInput.value = '';
+          showSection('admin-section');
+      } else {
+          loginErrorMsg.textContent = 'Неверный логин или пароль администратора.';
+          loginErrorMsg.style.display = 'block';
+          passwordInput.value = '';
+      }
+  }
+
+  /**
+   * Выход из админ-панели.
+   */
+  function adminLogout() {
+      isAdminLoggedIn = false;
+      localStorage.setItem(STORAGE_ADMIN_AUTH_KEY, JSON.stringify(false));
+      showNotification('Вы вышли из админ-панели.');
+      showSection('home-section'); // Возвращаемся на главную
+  }
+
+
+  // --- Функции аутентификации и регистрации пользователей ---
+
+  /**
+   * Простая функция для "хеширования" пароля (НЕБЕЗОПАСНО для реального использования).
+   * @param {string} password - Пароль для хеширования.
+   * @returns {string} "Хешированный" пароль.
+   */
+  function hashPassword(password) {
+      return btoa(password); // Base64 кодирование
+  }
+
+  /**
+   * Проверяет "хешированный" пароль.
+   * @param {string} inputPassword - Введенный пароль.
+   * @param {string} storedHash - Хешированный пароль из хранилища.
+   * @returns {boolean} True, если пароли совпадают.
+   */
+  function checkPassword(inputPassword, storedHash) {
+      return hashPassword(inputPassword) === storedHash;
+  }
+
+  /**
+   * Обновляет информацию о текущем пользователе в UI.
+   */
+  function updateUserInfo() {
+      const userInfoDiv = document.getElementById('user-info');
+      const currentUsernameSpan = document.getElementById('current-username');
+      const userBalanceSpan = document.getElementById('user-balance');
+
+      if (currentUser) {
+          currentUsernameSpan.textContent = currentUser.firstName || currentUser.username;
+          userBalanceSpan.textContent = currentUser.balance.toFixed(0); // Округляем до целых рублей
+          userInfoDiv.style.display = 'flex'; // Используем flex для user-info
+      } else {
+          userInfoDiv.style.display = 'none';
+      }
+  }
+
+  /**
+   * Авторизация пользователя.
+   */
+  function loginUser() {
+      const usernameInput = document.getElementById('login-username');
+      const passwordInput = document.getElementById('login-password');
+      const loginErrorMsg = document.getElementById('login-error-message');
+
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      // Проверка на админа
+      if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+          isAdminLoggedIn = true;
+          localStorage.setItem(STORAGE_ADMIN_AUTH_KEY, JSON.stringify(true));
+          showNotification('Вход выполнен успешно как администратор!');
+          usernameInput.value = '';
+          passwordInput.value = '';
+          showSection('admin-section');
+          return;
+      }
+
+      // Проверка обычного пользователя
+      const user = users.find(u => u.username === username);
+
+      if (user && checkPassword(password, user.passwordHash)) {
+          currentUser = user;
+          // Инициализируем screenshotPenaltyCount, если его нет
+          if (typeof currentUser.screenshotPenaltyCount === 'undefined') {
+              currentUser.screenshotPenaltyCount = 0;
+          }
+          localStorage.setItem(STORAGE_CURRENT_USER_KEY, JSON.stringify(currentUser));
+          showNotification(`Добро пожаловать, ${currentUser.firstName}!`);
+          usernameInput.value = '';
+          passwordInput.value = '';
+          updateUserInfo(); // Обновляем информацию о пользователе
+          renderProducts(); // Обновляем кнопки "Куплено" на главной
+          renderPrograms(); // Обновляем кнопки "Куплено" в программах
+          showSection('home-section'); // Переходим на главную
+      } else {
+          loginErrorMsg.textContent = 'Неверный логин или пароль.';
+          loginErrorMsg.style.display = 'block';
+          passwordInput.value = '';
+      }
+  }
+
+  /**
+   * Выход пользователя из системы.
+   */
+  function logoutUser() {
+      currentUser = null;
+      localStorage.removeItem(STORAGE_CURRENT_USER_KEY);
+      isAdminLoggedIn = false; // Также сбрасываем админ-статус при выходе
+      localStorage.setItem(STORAGE_ADMIN_AUTH_KEY, JSON.stringify(false));
+      showNotification('Вы вышли из аккаунта.');
+      updateUserInfo(); // Скрываем информацию о пользователе
+      renderProducts(); // Обновляем кнопки (снова "Купить")
+      renderPrograms(); // Обновляем кнопки в программах
+      showSection('login-section'); // Переходим на страницу входа
+  }
+
+  /**
+   * Регистрация нового пользователя.
+   */
+  function registerUser() {
+      const firstNameInput = document.getElementById('register-first-name');
+      const lastNameInput = document.getElementById('register-last-name');
+      const usernameInput = document.getElementById('register-username');
+      const passwordInput = document.getElementById('register-password');
+      const registerErrorMsg = document.getElementById('register-error-message');
+
+      const firstName = firstNameInput.value.trim();
+      const lastName = lastNameInput.value.trim();
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (!firstName || !lastName || !username || !password) {
+          registerErrorMsg.textContent = 'Пожалуйста, заполните все поля.';
+          registerErrorMsg.style.display = 'block';
+          return;
+      }
+
+      if (users.some(u => u.username === username)) {
+          registerErrorMsg.textContent = 'Пользователь с таким логином уже существует.';
+          registerErrorMsg.style.display = 'block';
+          return;
+      }
+
+      const newUser = {
+          firstName: firstName,
+          lastName: lastName,
+          username: username,
+          passwordHash: hashPassword(password), // "Хешируем" пароль
+          balance: 0, // Начальный баланс
+          purchases: [], // Список покупок пользователя
+          screenshotPenaltyCount: 0 // Новый счетчик для штрафов за скриншоты
+      };
+
+      users.push(newUser);
+      localStorage.setItem(STORAGE_USERS_KEY, JSON.stringify(users));
+      showNotification('Регистрация успешна! Теперь вы можете войти.');
+
+      firstNameInput.value = '';
+      lastNameInput.value = '';
+      usernameInput.value = '';
+      passwordInput.value = '';
+      showSection('login-section'); // Переходим на страницу входа
+  }
+
+  // --- Функции для главной страницы (продукты) ---
+
+  /**
+   * Генерирует HTML для карточки продукта.
+   * @param {object} product - Объект продукта.
+   * @param {boolean} isProgram - Является ли продукт программой (для стилизации и логики кнопки).
+   * @returns {string} HTML-строка карточки.
+   */
+  function createProductCard(product, isProgram = false) {
+    // Проверяем, куплен ли товар текущим пользователем
+    const isPurchased = currentUser && currentUser.purchases.some(p => p.id === product.id);
+    const priceText = product.price === 0 ? 'Бесплатно' : `${product.price}₽`;
+    let buttonText = product.price === 0 ? 'Читать' : 'Купить';
+    let buttonClass = 'btn-buy';
+    let buttonAction = `buyProduct('${product.id}')`;
+
+    if (isPurchased) {
+        buttonText = 'Куплено';
+        buttonClass += ' purchased'; // Добавляем класс для стилизации
+        // Если куплено, действие - показать уведомление или открыть гайд
+        if (product.fileContent) {
+            // Экранируем обратные кавычки и другие спецсимволы для передачи в строковый аргумент
+            const escapedContent = product.fileContent.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/"/g, '\\"').replace(/`/g, '\\`');
+            buttonAction = `showReadGuideModal('${product.title}', '${escapedContent}')`;
+        } else if (product.fileUrl) {
+            buttonAction = `window.open('${product.fileUrl}', '_blank')`;
+        } else {
+            buttonAction = `showNotification('Этот гайд уже куплен! Проверьте раздел "Мои файлы".');`;
+        }
+    } else if (!currentUser) { // Если пользователь не авторизован
+        buttonText = 'Войти для покупки';
+        buttonClass += ' disabled'; // Можно добавить класс для стилизации неактивной кнопки
+        buttonAction = `showError('Пожалуйста, войдите в аккаунт, чтобы совершить покупку.'); showSection('login-section');`;
+    } else if (product.price > currentUser.balance) { // Если баланс недостаточен
+        buttonText = 'Недостаточно средств';
+        buttonClass += ' disabled';
+        buttonAction = `showError('Недостаточно средств на балансе. Пополните баланс.');`;
+    }
+
+    if (isProgram) {
+        return `
+            <div class="program-details">
+                <h3>${product.title}</h3>
+                <p>${product.desc}</p>
+                <h4>Подробности:</h4>
+                <p>${product.fileContent.split('##')[2] || 'Нет подробностей.'}</p>
+                <h4>Системные требования:</h4>
+                <ul>
+                    ${product.fileContent.split('**Системные требования:**')[1]?.split('**Как использовать Celestial Optimisation:**')[0]?.split('\n').filter(line => line.trim() && line.trim() !== '*').map(line => `<li>${line.trim().replace(/^\* /, '')}</li>`).join('') || '<li>Нет данных.</li>'}
+                </ul>
+                <h4>Как использовать:</h4>
+                <p>${product.fileContent.split('**Как использовать Celestial Optimisation:**')[1]?.split('**Важные советы:**')[0]?.split('\n').filter(line => line.trim() && line.trim() !== '*').map(line => line.trim()).join('<br>') || 'Нет инструкций.'}</p>
+                <div class="price">${priceText}</div>
+                <button class="${buttonClass}" onclick="${buttonAction}">${buttonText}</button>
+            </div>
+        `;
+    } else {
+        return `
+            <div class="card">
+                <h3>${product.title}</h3>
+                <p class="desc">${product.desc}</p>
+                <div class="price">${priceText}</div>
+                <button class="${buttonClass}" onclick="${buttonAction}">${buttonText}</button>
+            </div>
+        `;
+    }
+  }
+
+  /**
+   * Рендерит все продукты на главной странице.
+   */
+  function renderProducts() {
+    const homeSection = document.getElementById('home-section');
+    homeSection.innerHTML = ''; // Очищаем перед рендерингом
+    // Отображаем все продукты всегда, независимо от статуса авторизации
+    products.forEach(product => {
+      homeSection.innerHTML += createProductCard(product);
+    });
+  }
+
+  /**
+   * Рендерит программы в секции "Программы".
+   */
+  function renderPrograms() {
+      const programsListDiv = document.getElementById('programs-list');
+      programsListDiv.innerHTML = ''; // Очищаем перед рендерингом
+
+      programsProducts.forEach(program => {
+          programsListDiv.innerHTML += createProductCard(program, true); // Передаем true для isProgram
+      });
+  }
+
+  /**
+   * Обновляет состояние кнопки "Купить" для конкретного продукта.
+   * @param {string} productId - ID продукта.
+   */
+  function updateProductButtonState(productId) {
+      // Обновляем кнопки на главной странице
+      const homeProductCards = document.querySelectorAll('#home-section .card');
+      homeProductCards.forEach(card => {
+          const button = card.querySelector(`button[onclick*="buyProduct('${productId}')"]`);
+          if (button) {
+              const product = products.find(p => p.id === productId);
+              if (product) {
+                  const isPurchased = currentUser && currentUser.purchases.some(p => p.id === product.id);
+                  const priceText = product.price === 0 ? 'Читать' : 'Купить';
+
+                  if (isPurchased) {
+                      button.textContent = 'Куплено';
+                      button.classList.add('purchased');
+                      button.classList.remove('disabled');
+                      if (product.fileContent) {
+                          const escapedContent = product.fileContent.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/"/g, '\\"').replace(/`/g, '\\`');
+                          button.onclick = () => showReadGuideModal(product.title, escapedContent);
+                      } else if (product.fileUrl) {
+                          button.onclick = () => window.open(product.fileUrl, '_blank');
+                      } else {
+                          button.onclick = () => showNotification('Этот гайд уже куплен! Проверьте раздел "Мои файлы".');
+                      }
+                  } else if (!currentUser) {
+                      button.textContent = 'Войти для покупки';
+                      button.classList.add('disabled');
+                      button.classList.remove('purchased');
+                      button.onclick = () => { showError('Пожалуйста, войдите в аккаунт, чтобы совершить покупку.'); showSection('login-section'); };
+                  } else if (product.price > currentUser.balance) {
+                      button.textContent = 'Недостаточно средств';
+                      button.classList.add('disabled');
+                      button.classList.remove('purchased');
+                      button.onclick = () => showError('Недостаточно средств на балансе. Пополните баланс.');
+                  } else {
+                      button.textContent = priceText;
+                      button.classList.remove('purchased');
+                      button.classList.remove('disabled');
+                      button.onclick = () => buyProduct(product.id);
+                  }
+              }
+          }
+      });
+
+      // Обновляем кнопки в секции "Программы"
+      const programsProductCards = document.querySelectorAll('#programs-section .program-details');
+      programsProductCards.forEach(card => {
+          const button = card.querySelector(`button[onclick*="buyProduct('${productId}')"]`);
+          if (button) {
+              const program = programsProducts.find(p => p.id === productId);
+              if (program) {
+                  const isPurchased = currentUser && currentUser.purchases.some(p => p.id === program.id);
+                  const priceText = program.price === 0 ? 'Читать' : 'Купить';
+
+                  if (isPurchased) {
+                      button.textContent = 'Куплено';
+                      button.classList.add('purchased');
+                      button.classList.remove('disabled');
+                      if (program.fileContent) {
+                          const escapedContent = program.fileContent.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/"/g, '\\"').replace(/`/g, '\\`');
+                          button.onclick = () => showReadGuideModal(program.title, escapedContent);
+                      } else if (program.fileUrl) {
+                          button.onclick = () => window.open(program.fileUrl, '_blank');
+                      } else {
+                          button.onclick = () => showNotification('Эта программа уже куплена! Проверьте раздел "Мои файлы".');
+                      }
+                  } else if (!currentUser) {
+                      button.textContent = 'Войти для покупки';
+                      button.classList.add('disabled');
+                      button.classList.remove('purchased');
+                      button.onclick = () => { showError('Пожалуйста, войдите в аккаунт, чтобы совершить покупку.'); showSection('login-section'); };
+                  } else if (program.price > currentUser.balance) {
+                      button.textContent = 'Недостаточно средств';
+                      button.classList.add('disabled');
+                      button.classList.remove('purchased');
+                      button.onclick = () => showError('Недостаточно средств на балансе. Пополните баланс.');
+                  } else {
+                      button.textContent = priceText;
+                      button.classList.remove('purchased');
+                      button.classList.remove('disabled');
+                      button.onclick = () => buyProduct(program.id);
+                  }
+              }
+          }
+      });
+  }
+
+
+  /**
+   * Обрабатывает покупку продукта.
+   * @param {string} productId - ID продукта.
+   */
+  function buyProduct(productId) {
+    if (!currentUser) {
+        showError('Пожалуйста, войдите в аккаунт, чтобы совершить покупку.');
+        showSection('login-section');
+        return;
+    }
+
+    // Ищем продукт как в основном списке, так и в программах
+    const product = allProducts.find(p => p.id === productId);
+    if (!product) {
+      showError('Товар не найден!');
+      return;
+    }
+
+    // Проверяем, куплен ли уже этот товар
+    if (currentUser.purchases.some(p => p.id === productId)) {
+      showNotification('Вы уже купили этот товар! Проверьте раздел "Мои файлы".');
+      // Если уже куплено, сразу открываем гайд
+      if (product.fileContent) {
+          showReadGuideModal(product.title, product.fileContent);
+      } else if (product.fileUrl) {
+          window.open(product.fileUrl, '_blank');
+      }
+      return;
+    }
+
+    // Проверяем баланс для платных гайдов
+    if (product.price > 0 && currentUser.balance < product.price) {
+        showError('Недостаточно средств на балансе. Пополните баланс.');
+        return;
+    }
+
+    // Списываем средства (если гайд платный)
+    if (product.price > 0) {
+        currentUser.balance -= product.price;
+    }
+
+    // Добавляем гайд в покупки пользователя
+    currentUser.purchases.push(product);
+    updateUserAndStorage(); // Обновляем текущего пользователя и сохраняем в localStorage
+
+    // Воспроизводим звук покупки
+    const purchaseSound = document.getElementById('purchase-sound');
+    if (purchaseSound) {
+        purchaseSound.currentTime = 0; // Сброс звука на начало, если он уже играл
+        purchaseSound.play().catch(e => console.error("Purchase sound play prevented:", e));
+    }
+
+    showNotification(`Покупка "${product.title}" успешно совершена!`);
+    updateUserInfo(); // Обновляем баланс в UI
+    updateProductButtonState(productId); // Обновляем состояние кнопки на "Куплено"
+    updateFilesList(); // Обновляем список файлов
+
+    // Показываем окно "Спасибо"
+    showThankYou(product);
+  }
+
+  // --- Функции для секции "Мои файлы" ---
+
+  /**
+   * Обновляет список купленных файлов.
+   */
+  function updateFilesList() {
+    const list = document.getElementById('files-list');
+    list.innerHTML = '';
+
+    if (!currentUser || currentUser.purchases.length === 0) {
+      list.innerHTML = '<p style="text-align: center; font-size: 1.5rem; color: var(--primary-color);">Пока что нет покупок.</p>';
+      return;
+    }
+
+    currentUser.purchases.forEach(item => {
+      const li = document.createElement('li');
+      const titleSpan = document.createElement('span');
+      titleSpan.classList.add('file-title');
+      titleSpan.textContent = item.title;
+      li.appendChild(titleSpan);
+
+      if (item.fileContent) {
+        const readBtn = document.createElement('button');
+        readBtn.classList.add('file-action-btn');
+        readBtn.textContent = 'Читать гайд';
+        // Экранируем контент для передачи в функцию
+        const escapedContent = item.fileContent.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/"/g, '\\"').replace(/`/g, '\\`');
+        readBtn.onclick = () => showReadGuideModal(item.title, escapedContent);
+        li.appendChild(readBtn);
+      } else if (item.fileUrl) {
+        const downloadBtn = document.createElement('a');
+        downloadBtn.classList.add('file-action-btn');
+        downloadBtn.href = item.fileUrl;
+        downloadBtn.target = '_blank';
+        downloadBtn.rel = 'noopener noreferrer';
+        downloadBtn.download = ''; // Позволяет браузеру решить, скачивать или открывать
+        downloadBtn.textContent = 'Скачать файл';
+        li.appendChild(downloadBtn);
+      }
+      list.appendChild(li);
+    });
+  }
+
+  // --- Функции для окна "Спасибо за покупку" ---
+
+  /**
+   * Показывает окно "Спасибо за покупку".
+   * @param {object} product - Купленный продукт.
+   */
+  function showThankYou(product) {
+    const thankyou = document.getElementById('thankyou');
+    const downloadLink = document.getElementById('download-link');
+    const thankyouMessage = document.getElementById('thankyou-message');
+    const discordLink = document.getElementById('discord-link');
+
+    thankyouMessage.textContent = `Спасибо за покупку "${product.title}"!`;
+
+    // Логика для кнопки скачивания/чтения в окне "Спасибо"
+    if (product.fileContent) {
+      downloadLink.textContent = 'Читать гайд';
+      downloadLink.href = '#'; // Сбрасываем href, чтобы не скачивалось
+      downloadLink.onclick = (e) => {
+          e.preventDefault(); // Отменяем стандартное действие ссылки
+          closeThankYou(); // Закрываем окно "Спасибо"
+          // Экранируем контент для передачи в функцию
+          const escapedContent = product.fileContent.replace(/\\/g, '\\\\').replace(/'/g, '\\\'').replace(/"/g, '\\"').replace(/`/g, '\\`');
+          showReadGuideModal(product.title, escapedContent); // Открываем модальное окно чтения
+      };
+      downloadLink.style.display = 'inline-block';
+      downloadLink.removeAttribute('download'); // Убираем атрибут download
+    } else if (product.fileUrl) {
+      downloadLink.textContent = 'Скачать файл';
+      downloadLink.href = product.fileUrl;
+      downloadLink.target = '_blank';
+      downloadLink.rel = 'noopener noreferrer';
+      downloadLink.setAttribute('download', ''); // Добавляем атрибут download
+      downloadLink.onclick = null; // Убираем обработчик, если был
+      downloadLink.style.display = 'inline-block';
+    } else {
+      downloadLink.style.display = 'none';
+    }
+
+    // Обновляем текст и ссылку Discord
+    discordLink.textContent = `Связаться: ${DISCORD_USERNAME}`;
+    discordLink.href = `https://discord.gg/9QfX4yH6Ed`;
+    discordLink.style.display = 'inline-block';
+
+    thankyou.classList.add('show');
+  }
+
+  /**
+   * Скрывает окно "Спасибо за покупку".
+   */
+  function closeThankYou() {
+    document.getElementById('thankyou').classList.remove('show');
+  }
+
+  // --- Функции для модального окна чтения гайда ---
+
+  /**
+   * Показывает модальное окно для чтения гайда.
+   * @param {string} title - Заголовок гайда.
+   * @param {string} content - Текстовое содержимое гайда.
+   */
+  function showReadGuideModal(title, content) {
+      const modal = document.getElementById('read-guide-modal');
+      const modalTitle = document.getElementById('guide-modal-title');
+      const modalText = document.getElementById('read-guide-text');
+
+      modalTitle.textContent = title;
+      modalText.textContent = content; // Используем textContent для безопасной вставки
+
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden'; // Запрещаем прокрутку основного контента
+
+      // Активируем защиту от копирования и скриншотов
+      activateContentProtection();
+  }
+
+  /**
+   * Скрывает модальное окно для чтения гайда.
+   */
+  function closeReadGuideModal() {
+      const modal = document.getElementById('read-guide-modal');
+      modal.classList.remove('show');
+      document.body.style.overflow = ''; // Разрешаем прокрутку основного контента
+
+      // Деактивируем защиту
+      deactivateContentProtection();
+  }
+
+  /**
+   * Активирует защиту контента (отключение выделения, ПКМ, некоторых клавиш).
+   */
+  function activateContentProtection() {
+      const contentElement = document.getElementById('read-guide-content');
+
+      // Отключение правой кнопки мыши
+      contentElement.addEventListener('contextmenu', preventDefaultHandler);
+      document.addEventListener('contextmenu', preventDefaultHandler); // На всякий случай на весь документ
+
+      // Отключение комбинаций клавиш для копирования (Ctrl+C, Cmd+C) и печати (Ctrl+P, Cmd+P)
+      document.addEventListener('keydown', preventCopyAndPrintHandler);
+
+      // Попытка отключить Print Screen и Win+Shift+S
+      document.addEventListener('keyup', preventScreenshotKeys);
+      document.addEventListener('keydown', preventScreenshotKeys); // Для некоторых случаев
+  }
+
+  /**
+   * Деактивирует защиту контента.
+   */
+  function deactivateContentProtection() {
+      const contentElement = document.getElementById('read-guide-content');
+
+      contentElement.removeEventListener('contextmenu', preventDefaultHandler);
+      document.removeEventListener('contextmenu', preventDefaultHandler);
+      document.removeEventListener('keydown', preventCopyAndPrintHandler);
+      document.removeEventListener('keyup', preventScreenshotKeys);
+      document.removeEventListener('keydown', preventScreenshotKeys);
+  }
+
+  function preventDefaultHandler(e) {
+      e.preventDefault();
+      return false;
+  }
+
+  function preventCopyAndPrintHandler(e) {
+      // Отключение Ctrl+C, Cmd+C, Ctrl+P, Cmd+P
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'C' || e.key === 'p' || e.key === 'P')) {
+          e.preventDefault();
+          alert('Копирование и печать запрещены.');
+          return false;
+      }
+  }
+
+  // Логика предупреждений и штрафов за скриншоты
+  function preventScreenshotKeys(e) {
+      // Проверяем, авторизовано ли модальное окно чтения гайда
+      const readGuideModal = document.getElementById('read-guide-modal');
+      if (!readGuideModal || !readGuideModal.classList.contains('show')) {
+          return true; // Если модальное окно не активно, не вмешиваемся
+      }
+
+      // Проверяем, авторизован ли пользователь
+      if (!currentUser) {
+          // Если не авторизован, просто предотвращаем действие, но без штрафов
+          if (e.key === 'PrintScreen' || e.keyCode === 44 || ((e.metaKey || e.ctrlKey) && e.shiftKey && (e.key === 's' || e.key === 'S'))) {
+              alert('Скриншоты запрещены.');
+              e.preventDefault();
+              return false;
+          }
+          return true; // Разрешаем другие клавиши
+      }
+
+      // Если пользователь авторизован, применяем логику штрафов
+      const basePenalty = 50;
+      let penaltyAmount = 0;
+      let message = '';
+
+      // Проверяем, является ли событие нажатием клавиши скриншота
+      const isScreenshotAttempt = (e.key === 'PrintScreen' || e.keyCode === 44) || // PrtSc
+                                  ((e.metaKey || e.ctrlKey) && e.shiftKey && (e.key === 's' || e.key === 'S')); // Win + Shift + S
+
+      if (isScreenshotAttempt) {
+          e.preventDefault(); // Предотвращаем стандартное действие
+
+          if (currentUser.screenshotPenaltyCount === 0) {
+              message = 'ВНИМАНИЕ: Скриншоты запрещены! Повторная попытка приведет к штрафу.';
+              currentUser.screenshotPenaltyCount = 1;
+          } else {
+              penaltyAmount = basePenalty + (currentUser.screenshotPenaltyCount - 1) * basePenalty;
+              
+              if (currentUser.balance < penaltyAmount) {
+                  message = `ШТРАФ: Скриншоты запрещены! Недостаточно средств (${penaltyAmount}₽) для штрафа. Ваш баланс: ${currentUser.balance.toFixed(0)}₽. Баланс обнулен.`;
+                  currentUser.balance = 0; // Обнуляем баланс
+              } else {
+                  currentUser.balance -= penaltyAmount;
+                  message = `ШТРАФ: Скриншоты запрещены! С вашего баланса списано ${penaltyAmount}₽. Текущий баланс: ${currentUser.balance.toFixed(0)}₽.`;
+              }
+              currentUser.screenshotPenaltyCount++;
+          }
+          alert(message);
+          updateUserAndStorage(); // Сохраняем изменения и обновляем UI
+          return false; // Останавливаем дальнейшую обработку события
+      }
+      return true; // Разрешаем другие клавиши
+  }
+
+  /**
+   * Вспомогательная функция для обновления данных текущего пользователя
+   * и сохранения их в localStorage.
+   */
+  function updateUserAndStorage() {
+      localStorage.setItem(STORAGE_CURRENT_USER_KEY, JSON.stringify(currentUser));
+      const userIndex = users.findIndex(u => u.username === currentUser.username);
+      if (userIndex !== -1) {
+          users[userIndex] = currentUser;
+          localStorage.setItem(STORAGE_USERS_KEY, JSON.stringify(users));
+      }
+      updateUserInfo(); // Обновляем баланс в UI
+  }
+
+
+  // --- Функции для админ панели ---
+
+  /**
+   * Добавляет новый товар в список продуктов.
+   */
+  function addProduct() {
+    if (!isAdminLoggedIn) { showError('Вы не авторизованы как администратор.'); return; } // Проверка авторизации
+
+    const titleInput = document.getElementById('new-title');
+    const descInput = document.getElementById('new-desc');
+    const priceInput = document.getElementById('new-price');
+    const fileUrlInput = document.getElementById('new-file-url');
+    const fileContentInput = document.getElementById('new-file-content');
+
+    const title = titleInput.value.trim();
+    const desc = descInput.value.trim();
+    const priceStr = priceInput.value.trim();
+    const fileUrl = fileUrlInput.value.trim();
+    const fileContent = fileContentInput.value.trim();
+
+    if (!title || !desc || priceStr === '') {
+      showError('Пожалуйста, заполните все обязательные поля (Название, Описание, Цена).');
+      return;
+    }
+    if (isNaN(priceStr) || Number(priceStr) < 0) {
+      showError('Цена должна быть неотрицательным числом.');
+      return;
+    }
+
+    const price = Number(priceStr);
+    const newId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+    if (allProducts.some(p => p.id === newId)) { // Проверяем по всему списку продуктов
+      showError('Товар с таким названием уже существует. Измените название.');
+      return;
+    }
+
+    const newProduct = {
+      id: newId,
+      title,
+      desc,
+      price,
+      fileUrl: fileUrl,
+      fileContent: fileContent
+    };
+
+    allProducts.push(newProduct); // Добавляем в общий список
+    localStorage.setItem(STORAGE_PRODUCTS_KEY, JSON.stringify(allProducts));
+
+    // Обновляем локальные массивы products и programsProducts
+    products = allProducts.filter(p => !programsProducts.some(pp => pp.id === p.id));
+    // Если новый продукт - это программа, добавляем его в programsProducts
+    if (programsProducts.some(pp => pp.id === newId)) {
+        // Это не произойдет, так как programsProducts фиксирован, но для универсальности
+        // можно было бы добавить логику, если программы тоже динамически добавляются.
+    }
+
+
+    showNotification(`Товар "${title}" успешно добавлен!`);
+
+    titleInput.value = '';
+    descInput.value = '';
+    priceInput.value = '';
+    fileUrlInput.value = '';
+    fileContentInput.value = '';
+
+    populateProductSelect(); // Обновляем список для редактирования
+    renderProducts(); // Обновляем главную страницу
+    renderPrograms(); // Обновляем страницу программ
+  }
+
+  /**
+   * Заполняет выпадающий список товаров для редактирования.
+   */
+  function populateProductSelect() {
+    const select = document.getElementById('edit-product-select');
+    select.innerHTML = '<option value="">-- Выберите товар --</option>';
+
+    allProducts.forEach(product => { // Используем allProducts для админки
+      const option = document.createElement('option');
+      option.value = product.id;
+      option.textContent = product.title;
+      select.appendChild(option);
+    });
+
+    // Сбрасываем поля редактирования
+    document.getElementById('edit-title').value = '';
+    document.getElementById('edit-desc').value = '';
+    document.getElementById('edit-price').value = '';
+    document.getElementById('edit-file-url').value = '';
+    document.getElementById('edit-file-content').value = '';
+    document.getElementById('edit-title').disabled = true;
+  }
+
+  /**
+   * Загружает данные выбранного товара в поля редактирования.
+   */
+  function loadProductForEdit() {
+    const selectedId = document.getElementById('edit-product-select').value;
+    const product = allProducts.find(p => p.id === selectedId); // Ищем в allProducts
+
+    if (product) {
+      document.getElementById('edit-title').value = product.title;
+      document.getElementById('edit-desc').value = product.desc;
+      document.getElementById('edit-price').value = product.price;
+      document.getElementById('edit-file-url').value = product.fileUrl;
+      document.getElementById('edit-file-content').value = product.fileContent;
+      document.getElementById('edit-title').disabled = false; // Разблокируем поле названия
+    } else {
+      // Если ничего не выбрано, очищаем поля
+      document.getElementById('edit-title').value = '';
+      document.getElementById('edit-desc').value = '';
+      document.getElementById('edit-price').value = '';
+      document.getElementById('edit-file-url').value = '';
+      document.getElementById('edit-file-content').value = '';
+      document.getElementById('edit-title').disabled = true; // Блокируем поле названия
+    }
+  }
+
+  /**
+   * Обновляет данные существующего товара.
+   */
+  function updateProduct() {
+    if (!isAdminLoggedIn) { showError('Вы не авторизованы как администратор.'); return; } // Проверка авторизации
+
+    const selectedId = document.getElementById('edit-product-select').value;
+    if (!selectedId) {
+      showError('Пожалуйста, выберите товар для редактирования.');
+      return;
+    }
+
+    const productIndex = allProducts.findIndex(p => p.id === selectedId); // Ищем в allProducts
+    if (productIndex === -1) {
+      showError('Выбранный товар не найден.');
+      return;
+    }
+
+    // Название товара не меняется через редактирование, только описание, цена, ссылки/контент
+    const desc = document.getElementById('edit-desc').value.trim();
+    const priceStr = document.getElementById('edit-price').value.trim();
+    const fileUrl = document.getElementById('edit-file-url').value.trim();
+    const fileContent = document.getElementById('edit-file-content').value.trim();
+
+    if (!desc || priceStr === '') {
+      showError('Описание и цена не могут быть пустыми.');
+      return;
+    }
+    if (isNaN(priceStr) || Number(priceStr) < 0) {
+      showError('Цена должна быть неотрицательным числом.');
+      return;
+    }
+
+    allProducts[productIndex].desc = desc;
+    allProducts[productIndex].price = Number(priceStr);
+    allProducts[productIndex].fileUrl = fileUrl;
+    allProducts[productIndex].fileContent = fileContent;
+
+    localStorage.setItem(STORAGE_PRODUCTS_KEY, JSON.stringify(allProducts));
+    showNotification(`Товар "${allProducts[productIndex].title}" успешно обновлен!`);
+
+    // Сбрасываем выбор и поля после обновления
+    document.getElementById('edit-product-select').value = '';
+    loadProductForEdit(); // Очистит поля
+    renderProducts(); // Обновляем главную страницу
+    renderPrograms(); // Обновляем страницу программ
+  }
+
+  /**
+   * Пополняет баланс указанному пользователю.
+   */
+  function addBalanceToUser() {
+      if (!isAdminLoggedIn) { showError('Вы не авторизованы как администратор.'); return; }
+
+      const usernameInput = document.getElementById('balance-username');
+      const amountInput = document.getElementById('balance-amount');
+
+      const username = usernameInput.value.trim();
+      const amount = parseFloat(amountInput.value.trim());
+
+      if (!username || isNaN(amount) || amount <= 0) {
+          showError('Пожалуйста, введите корректный логин пользователя и положительную сумму.');
+          return;
+      }
+
+      const userIndex = users.findIndex(u => u.username === username);
+      if (userIndex === -1) {
+          showError('Пользователь с таким логином не найден.');
+          return;
+      }
+
+      users[userIndex].balance = (users[userIndex].balance || 0) + amount; // Добавляем к текущему балансу
+      localStorage.setItem(STORAGE_USERS_KEY, JSON.stringify(users));
+
+      // Если пополняем баланс текущему авторизованному пользователю, обновляем его данные
+      if (currentUser && currentUser.username === username) {
+          currentUser.balance = users[userIndex].balance;
+          localStorage.setItem(STORAGE_CURRENT_USER_KEY, JSON.stringify(currentUser));
+          updateUserInfo(); // Обновляем баланс в UI
+      }
+
+      showNotification(`Баланс пользователя "${username}" успешно пополнен на ${amount}₽. Новый баланс: ${users[userIndex].balance.toFixed(0)}₽`);
+      usernameInput.value = '';
+      amountInput.value = '';
+  }
+
+  /**
+   * Выводит данные всех пользователей в консоль браузера.
+   * (Имитация "базы данных" для админа)
+   */
+  function exportUsersData() {
+      if (!isAdminLoggedIn) {
+          showError('Вы не авторизованы как администратор.');
+          return;
+      }
+      console.log("--- Данные всех пользователей (для админа) ---");
+      console.log(JSON.stringify(users, null, 2)); // Выводим в красивом формате
+      showNotification('Данные пользователей выведены в консоль браузера (F12 -> Console).');
+  }
+
+  // --- Функции для пополнения баланса (пользовательская) ---
+  function processTopup() {
+      if (!currentUser) {
+          showError('Пожалуйста, войдите в аккаунт, чтобы пополнить баланс.');
+          showSection('login-section');
+          return;
+      }
+
+      const amountInput = document.getElementById('topup-amount');
+      const currencySelect = document.getElementById('topup-currency');
+      const topupErrorMsg = document.getElementById('topup-error-message');
+
+      const amount = parseFloat(amountInput.value.trim());
+      const currency = currencySelect.value;
+
+      if (isNaN(amount) || amount <= 0) {
+          topupErrorMsg.textContent = 'Пожалуйста, введите корректную положительную сумму.';
+          topupErrorMsg.style.display = 'block';
+          return;
+      }
+
+      const rate = EXCHANGE_RATES[currency];
+      const amountInRubles = amount * rate;
+
+      currentUser.balance = (currentUser.balance || 0) + amountInRubles;
+      updateUserAndStorage(); // Обновляем текущего пользователя и сохраняем в localStorage
+
+      showNotification(`Баланс успешно пополнен на ${amount} ${currency} (${amountInRubles.toFixed(0)}₽)!`);
+      updateUserInfo(); // Обновляем баланс в UI
+      amountInput.value = '';
+      currencySelect.value = 'RUB'; // Сбрасываем валюту
+      showSection('home-section'); // Возвращаем на главную
+  }
+
+
+  // --- Функции для секции "Отзывы" ---
+
+  /**
+   * Добавляет новый отзыв.
+   */
+  function addReview() {
+    const nameInput = document.getElementById('review-name');
+    const textInput = document.getElementById('review-text');
+
+    const name = nameInput.value.trim() || 'Аноним';
+    const text = textInput.value.trim();
+
+    if (!text) {
+      showError('Пожалуйста, напишите текст отзыва.');
+      return;
+    }
+
+    const newReview = {
+      name: name,
+      text: text,
+      date: new Date().toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' })
+    };
+
+    reviews.push(newReview);
+    localStorage.setItem(STORAGE_REVIEWS_KEY, JSON.stringify(reviews));
+
+    showNotification('Ваш отзыв успешно добавлен!');
+
+    nameInput.value = '';
+    textInput.value = '';
+    renderReviews();
+  }
+
+  /**
+   * Рендерит список отзывов.
+   */
+  function renderReviews() {
+    const reviewsList = document.getElementById('reviews-list');
+    // Проверяем, существует ли reviewsList, так как он может быть не создан, если пользователь не авторизован
+    if (!reviewsList) return;
+
+    reviewsList.innerHTML = '';
+
+    if (reviews.length === 0) {
+      reviewsList.innerHTML = '<li>Пока нет отзывов. Будьте первым!</li>';
+      return;
+    }
+
+    [...reviews].reverse().forEach(review => { // Отображаем новые отзывы сверху
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <strong>${review.name}</strong>
+        <p>${review.text}</p>
+        <small>${review.date}</small>
+      `;
+      reviewsList.appendChild(li);
+    });
+  }
+
+  // --- Функции для секции "Пользователи в сети" ---
+  /**
+   * Рендерит список всех зарегистрированных пользователей (имитация "онлайн").
+   */
+  function renderOnlineUsers() {
+      const onlineUsersList = document.getElementById('online-users-list');
+      onlineUsersList.innerHTML = '';
+
+      if (users.length === 0) {
+          onlineUsersList.innerHTML = '<p style="text-align: center; font-size: 1.2rem; color: var(--primary-color);">Пока нет зарегистрированных пользователей.</p>';
+          return;
+      }
+
+      users.forEach(user => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+              <span>${user.firstName} <strong>(${user.username})</strong></span>
+              <span class="balance">Баланс: ${user.balance.toFixed(0)}₽</span>
+          `;
+          onlineUsersList.appendChild(li);
+      });
+  }
+
+
+  // --- Вспомогательные функции для сообщений ---
+
+  /**
+   * Показывает сообщение об ошибке.
+   * @param {string} message - Текст ошибки.
+   */
+  function showError(message) {
+    const errorMsg = document.getElementById('error-message');
+    // Проверяем, какая секция активна, чтобы показать ошибку в правильном месте
+    const loginErrorMsg = document.getElementById('login-error-message');
+    const registerErrorMsg = document.getElementById('register-error-message');
+    const topupErrorMsg = document.getElementById('topup-error-message'); // Для пополнения
+
+    // Сначала скрываем все сообщения, чтобы избежать наложения
+    hideMessage('error-message');
+    hideMessage('notification-message');
+    hideMessage('login-error-message');
+    hideMessage('register-error-message');
+    hideMessage('topup-error-message');
+
+    if (loginErrorMsg && loginErrorMsg.offsetParent !== null) { // Если секция логина видна
+        loginErrorMsg.textContent = message;
+        loginErrorMsg.style.display = 'block';
+        setTimeout(() => loginErrorMsg.style.display = 'none', 5000);
+    } else if (registerErrorMsg && registerErrorMsg.offsetParent !== null) { // Если секция регистрации видна
+        registerErrorMsg.textContent = message;
+        registerErrorMsg.style.display = 'block';
+        setTimeout(() => registerErrorMsg.style.display = 'none', 5000);
+    } else if (topupErrorMsg && topupErrorMsg.offsetParent !== null) { // Если секция пополнения видна
+        topupErrorMsg.textContent = message;
+        topupErrorMsg.style.display = 'block';
+        setTimeout(() => topupErrorMsg.style.display = 'none', 5000);
+    } else { // В остальных случаях (например, админка или главная)
+        errorMsg.textContent = message;
+        errorMsg.style.display = 'block';
+        setTimeout(() => errorMsg.style.display = 'none', 5000);
+    }
+  }
+
+  /**
+   * Показывает уведомление об успехе.
+   * @param {string} message - Текст уведомления.
+   */
+  function showNotification(message) {
+    const notificationMsg = document.getElementById('notification-message');
+    notificationMsg.textContent = message;
+    notificationMsg.style.display = 'block';
+    // Скрываем все ошибки при показе уведомления
+    hideMessage('error-message');
+    hideMessage('login-error-message');
+    hideMessage('register-error-message');
+    hideMessage('topup-error-message');
+    setTimeout(() => notificationMsg.style.display = 'none', 5000);
+  }
+
+  /**
+   * Скрывает сообщение по ID элемента.
+   * @param {string} elementId - ID элемента сообщения.
+   */
+  function hideMessage(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.style.display = 'none';
+    }
+  }
+
+  // --- Функции для управления музыкой ---
+  let isMusicPlaying = false;
+  const bgMusic = document.getElementById('background-music');
+  const musicIcon = document.getElementById('music-icon');
+
+  // Устанавливаем громкость фоновой музыки
+  if (bgMusic) {
+      bgMusic.volume = 0.1; // 10% громкости
+  }
+
+  function toggleMusic() {
+      if (isMusicPlaying) {
+          bgMusic.pause();
+          musicIcon.textContent = '▶️'; // Play icon
+      } else {
+          // Попытка воспроизведения. catch() обрабатывает случаи, когда браузер блокирует автоплей.
+          bgMusic.play().catch(e => {
+              console.error("Music autoplay prevented:", e);
+              alert("Браузер заблокировал автоматическое воспроизведение музыки. Пожалуйста, нажмите кнопку '▶️' для запуска.");
+          });
+          musicIcon.textContent = '⏸️'; // Pause icon
+      }
+      isMusicPlaying = !isMusicPlaying;
+  }
+
+  // Попытка запустить музыку при первом взаимодействии пользователя с документом
+  document.addEventListener('click', function playMusicOnFirstInteraction() {
+      if (!isMusicPlaying && bgMusic) {
+          bgMusic.play().then(() => {
+              isMusicPlaying = true;
+              musicIcon.textContent = '⏸️';
+              document.removeEventListener('click', playMusicOnFirstInteraction); // Удаляем слушатель после успешного запуска
+          }).catch(e => {
+              console.log("Music autoplay prevented, user needs to click play button.");
+              // Если автоплей не удался, оставляем слушатель, чтобы пользователь мог запустить вручную
+          });
+      }
+  }, { once: true }); // Использовать { once: true } для удаления слушателя после первого клика
+
+
+  // --- Инициализация обработчиков событий ---
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Применяем сохраненную тему при загрузке страницы
+    const savedTheme = localStorage.getItem(STORAGE_THEME_KEY) || 'light';
+    setTheme(savedTheme);
+
+    // Проверяем, авторизован ли пользователь или админ
+    if (isAdminLoggedIn) {
+        showSection('admin-section');
+    } else if (currentUser) {
+        // Инициализируем screenshotPenaltyCount, если его нет (для старых пользователей)
+        if (typeof currentUser.screenshotPenaltyCount === 'undefined') {
+            currentUser.screenshotPenaltyCount = 0;
+            updateUserAndStorage(); // Сохраняем обновленного пользователя
+        }
+        updateUserInfo(); // Обновляем UI для авторизованного пользователя
+        renderProducts(); // Рендерим продукты с учетом покупок
+        renderPrograms(); // Рендерим программы
+        showSection('home-section');
+    } else {
+        showSection('login-section'); // Показываем форму входа по умолчанию
+    }
+
+    // Обработчики для кнопок навигации
+    document.getElementById('menu-home').onclick = () => {
+        showSection('home-section');
+        renderProducts(); // Перерисовываем продукты, чтобы обновить состояние кнопок
+    };
+    document.getElementById('menu-programs').onclick = () => { // НОВАЯ КНОПКА
+        showSection('programs-section');
+        renderPrograms(); // Перерисовываем программы
+    };
+    document.getElementById('menu-files').onclick = () => {
+      if (currentUser) {
+        updateFilesList(); // Обновляем список файлов перед показом
+        showSection('files-section');
+      } else {
+        showError('Пожалуйста, войдите в аккаунт, чтобы просмотреть ваши файлы.');
+        showSection('login-section');
+      }
+    };
+    document.getElementById('menu-reviews').onclick = () => {
+      showSection('reviews-section'); // Логика отображения контента отзывов внутри showSection
+    };
+    document.getElementById('menu-online-users').onclick = () => { // Новая кнопка
+        showSection('online-users-section');
+    };
+    document.getElementById('menu-admin').onclick = () => {
+        // Если админ уже авторизован, сразу показываем админку
+        if (isAdminLoggedIn) {
+            showSection('admin-section');
+        } else {
+            // Иначе показываем обычную форму логина, но с возможностью войти как админ
+            showSection('login-section');
+            document.querySelector('#login-section .admin-link').style.display = 'block'; // Убедимся, что ссылка на админ-логин видна
+            document.getElementById('login-username').value = '';
+            document.getElementById('login-password').value = '';
+            document.getElementById('login-error-message').textContent = 'Введите данные администратора.';
+            document.getElementById('login-error-message').style.display = 'block';
+            // Меняем обработчик кнопки "Войти" на админ-логин
+            document.querySelector('#login-section button').onclick = adminLogin;
+        }
+    };
+    document.getElementById('menu-login').onclick = () => {
+        showSection('login-section');
+        // Убедимся, что кнопка "Войти" в секции логина по умолчанию вызывает loginUser
+        document.querySelector('#login-section button').onclick = loginUser;
+        document.querySelector('#login-section .admin-link').style.display = 'block'; // Показываем ссылку на админ-логин
+    };
+    document.getElementById('menu-register').onclick = () => showSection('register-section');
+
+    // Обработчик для кнопки смены темы
+    document.getElementById('theme-toggle').onclick = toggleTheme;
+
+    // Убедимся, что кнопка "Войти" в секции логина по умолчанию вызывает loginUser
+    document.querySelector('#login-section button').onclick = loginUser;
+  });
+</script>
+// ================== BACKEND URL ==================
+const API_BASE = "https://your-railway-url.up.railway.app"; // замени на свой backend url
+
+// ================== РЕГИСТРАЦИЯ ==================
+async function registerUser() {
+  const username = document.getElementById("register-username").value.trim();
+  const password = document.getElementById("register-password").value.trim();
+  const res = await fetch(`${API_BASE}/api/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+  const data = await res.json();
+  if (res.ok) {
+    alert("Успешная регистрация");
+    showSection("login-section");
+  } else {
+    alert(data.error || "Ошибка регистрации");
+  }
+}
+
+// ================== АВТОРИЗАЦИЯ ==================
+async function loginUser() {
+  const username = document.getElementById("login-username").value.trim();
+  const password = document.getElementById("login-password").value.trim();
+  const res = await fetch(`${API_BASE}/api/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+  const data = await res.json();
+  if (res.ok) {
+    localStorage.setItem("user", username);
+    localStorage.setItem("balance", data.balance);
+    document.getElementById("current-username").textContent = username;
+    document.getElementById("user-balance").textContent = data.balance;
+    document.getElementById("user-info").style.display = "flex";
+    showSection("home-section");
+    loadProducts();
+  } else {
+    alert(data.error || "Ошибка входа");
+  }
+}
+
+// ================== ПОПОЛНЕНИЕ ==================
+async function processTopup() {
+  const username = localStorage.getItem("user");
+  const amount = parseInt(document.getElementById("topup-amount").value);
+  if (!amount || amount <= 0) return alert("Укажи сумму");
+  const res = await fetch(`${API_BASE}/api/topup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, amount })
+  });
+  const data = await res.json();
+  if (res.ok) {
+    localStorage.setItem("balance", data.balance);
+    document.getElementById("user-balance").textContent = data.balance;
+    alert("Баланс пополнен");
+    showSection("home-section");
+  } else {
+    alert(data.error || "Ошибка пополнения");
+  }
+}
+
+// ================== ЗАГРУЗКА ТОВАРОВ ==================
+async function loadProducts() {
+  const res = await fetch(`${API_BASE}/api/products`);
+  const products = await res.json();
+  const container = document.getElementById("home-section");
+  container.innerHTML = "";
+  products.forEach(p => {
+    const el = document.createElement("div");
+    el.className = "card";
+    el.innerHTML = `
+      <h3>${p.title}</h3>
+      <p class="desc">${p.desc}</p>
+      <p class="price">${p.price} ₽</p>
+      <button class="btn-buy" onclick="buyProduct('${p._id}')">Купить</button>
+    `;
+    container.appendChild(el);
+  });
+}
+
+// ================== ПОКУПКА ==================
+async function buyProduct(productId) {
+  const username = localStorage.getItem("user");
+  const res = await fetch(`${API_BASE}/api/purchase`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, productId })
+  });
+  const data = await res.json();
+  if (res.ok) {
+    localStorage.setItem("balance", data.balance);
+    document.getElementById("user-balance").textContent = data.balance;
+    if (data.fileUrl) {
+      window.open(data.fileUrl, "_blank");
+    } else if (data.fileContent) {
+      document.getElementById("read-guide-text").textContent = data.fileContent;
+      showReadGuideModal();
+    }
+    alert("Покупка успешна");
+  } else {
+    alert(data.error || "Ошибка покупки");
+  }
+}
+
+</body>
+</html>
